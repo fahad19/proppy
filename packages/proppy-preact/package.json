@@ -1,0 +1,39 @@
+{
+  "name": "proppy-preact",
+  "version": "0.0.1",
+  "description": "Preact integration with ProppyJS",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-preact",
+  "scripts": {
+    "clean": "../../node_modules/.bin/rimraf dist lib",
+    "lint": "../../node_modules/.bin/eslint src",
+    "transpile": "../../node_modules/.bin/babel src --out-dir lib",
+    "test": "../../node_modules/.bin/jest --",
+    "cover": "../../node_modules/.bin/jest --coverage",
+    "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
+    "dist:min": "NODE_ENV=production ../../node_modules/.bin/webpack --config ./webpack.config.js",
+    "dist": "npm run dist:lib && npm run dist:min",
+    "prepublish": "npm run transpile",
+    "build": "npm run transpile && npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahad19/proppy.git"
+  },
+  "author": {
+    "name": "Fahad Ibnay Heylaal",
+    "url": "http://fahad19.com"
+  },
+  "keywords": [
+    "proppy"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "preact": "^8.2.9",
+    "proppy": "0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/fahad19/proppy/issues"
+  },
+  "license": "MIT"
+}
