@@ -51,6 +51,47 @@
   </a>
 </div>
 
+# What is ProppyJS?
+
+ProppyJS is a tiny `1.5kB` JavaScript library for composing props (object that components receive to render themselves).
+
+The generated props can then be used in your favourite components-based UI framework (like React or Vue.js).
+
+# Packages
+
+| Package              | Status                                                     | Size    | Description               |
+|----------------------|------------------------------------------------------------|---------|---------------------------|
+| [proppy]             | [![proppy-status]][proppy-package]                         | `1.5K`  | Core package              |
+| [proppy-react]       | [![proppy-react-status]][proppy-react-package]             | `1.0K`  | React integration         |
+| [proppy-vue]         | [![proppy-vue-status]][proppy-vue-package]                 | `0.7K`  | Vue.js integration        |
+| [proppy-preact]      | [![proppy-preact-status]][proppy-preact-package]           | `1.1K`  | Preact integration        |
+| [proppy-redux]       | [![proppy-redux-status]][proppy-redux-package]             | `0.6K`  | Redux integration         |
+| [proppy-rx]          | [![proppy-rx-status]][proppy-rx-package]                   | `0.6K`  | RxJS integration          |
+
+[proppy]: https://proppyjs.com/docs/packages/proppy
+[proppy-react]: https://proppyjs.com/docs/packages/proppy-react
+[proppy-vue]: https://proppyjs.com/docs/packages/proppy-vue
+[proppy-preact]: https://proppyjs.com/docs/packages/proppy-preact
+[proppy-redux]: https://proppyjs.com/docs/packages/proppy-redux
+[proppy-rx]: https://proppyjs.com/docs/packages/proppy-rx
+[proppy-frint-react]: https://proppyjs.com/docs/packages/proppy-frint-react
+
+[proppy-status]: https://img.shields.io/npm/v/proppy.svg
+[proppy-react-status]: https://img.shields.io/npm/v/proppy-react.svg
+[proppy-vue-status]: https://img.shields.io/npm/v/proppy-vue.svg
+[proppy-preact-status]: https://img.shields.io/npm/v/proppy-preact.svg
+[proppy-redux-status]: https://img.shields.io/npm/v/proppy-redux.svg
+[proppy-rx-status]: https://img.shields.io/npm/v/proppy-rx.svg
+[proppy-frint-react-status]: https://img.shields.io/npm/v/proppy-frint-react.svg
+
+[proppy-package]: https://npmjs.com/package/proppy
+[proppy-react-package]: https://npmjs.com/package/proppy-react
+[proppy-vue-package]: https://npmjs.com/package/proppy-vue
+[proppy-preact-package]: https://npmjs.com/package/proppy-preact
+[proppy-redux-package]: https://npmjs.com/package/proppy-redux
+[proppy-rx-package]: https://npmjs.com/package/proppy-rx
+[proppy-frint-react-package]: https://npmjs.com/package/proppy-frint-react
+
 # Quick start
 
 - [Installation](#installation)
