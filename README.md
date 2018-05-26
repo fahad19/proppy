@@ -302,6 +302,10 @@ export default attach(P)(Counter);
 
 You can do the same with Vue.js and Preact too via [`proppy-vue`](https://proppyjs.com/docs/packages/proppy-vue) and [`proppy-preact`](https://proppyjs.com/docs/packages/proppy-preact) packages respectively.
 
-## License
+# Inspiration
+
+Original inspiration for this project has been [`recompose`](https://github.com/acdlite/recompose). If your project is using React, you should definitely check it out.
+
+# License
 
 MIT
