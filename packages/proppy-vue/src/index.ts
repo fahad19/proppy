@@ -1,0 +1,1 @@
+export { attach } from './attach';
