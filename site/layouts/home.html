@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> | Functional props composition for UI components</title>
+    <%= renderPartial('assets_head') %>
+  </head>
+
+  <body>
+    <section class="hero is-primary is-small">
+      <!-- Hero header: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <%= renderPartial('navLinks') %>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <img alt="ProppyJS" style="width: 65%; margin-bottom: 36px;" src="/img/banner-trimmed-900.png" />
+
+          <h2 class="subtitle">
+            Tiny <span>1.5kB utility library</span> enabling
+          </h2>
+
+          <h1 class="title">
+            <span>Functional props composition for components</span>
+          </h1>
+
+          <div style="margin-bottom: 16px;">
+            <a href="/docs/introduction" class="button is-primary is-medium">Learn more</a>
+            <a href="/docs/quickstart" class="button is-transparent is-medium">Quick start</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flow">
+      <div class="container">
+        <h2>Flow of props</h2>
+
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="box first">
+              <h3>Various sources</h3>
+
+              <ul>
+                <li>
+                  <img alt="Redux" src="/img/redux-logo.png" />
+                  <p>Redux</p>
+                </li>
+
+                <li>
+                  <img alt="JavaScript" src="/img/js-logo.png" />
+                  <p>JavaScript</p>
+                </li>
+
+                <li>
+                  <img alt="RxJS" src="/img/rxjs-logo.png" />
+                  <p>RxJS</p>
+                </li>
+              </ul>
+
+              <i class="fa fa-long-arrow-right"></i>
+            </div>
+          </div>
+
+          <div class="column is-one-third">
+            <div class="box second">
+              <h3>Compose as props</h3>
+
+              <img alt="ProppyJS" src="/img/logo-transparent.png" />
+
+              <p>Proppy</p>
+            </div>
+          </div>
+
+          <div class="column is-one-third">
+            <div class="box third">
+              <h3>Pass to any Component</h3>
+
+              <i class="fa fa-long-arrow-right"></i>
+
+              <ul>
+                <li>
+                  <img alt="React" src="/img/react-logo.svg" />
+                  <p>React</p>
+                </li>
+
+                <li>
+                  <img alt="Vue" src="/img/vue-logo.png" />
+                  <p>Vue.js</p>
+                </li>
+
+                <li>
+                  <img alt="Preact" src="/img/preact-logo.png" />
+                  <p>Preact</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%= contents %>
+
+    <%= renderPartial('footer') %>
+    <%= renderPartial('assets_body') %>
+  </body>
+</html>

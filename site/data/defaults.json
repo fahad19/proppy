@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "description": "ProppyJS: JavaScript library for functional composition of props for UI components",
+    "keywords": "javascript, library, react.js, vue.js, preact, rxjs, composition, props, framework"
+  },
+  "og": {
+    "title": "ProppyJS: Functional props composition for UI components",
+    "description": "ProppyJS is a tiny 1.5kB JavaScript library for functionally composing props for your UI components. Supporting integrations with React.js, Vue.js, Preact, Redux, and RxJS.",
+    "image": "/img/proppy-og.png",
+    "image:width": "1600",
+    "image:height": "630",
+    "type": "website"
+  }
+}

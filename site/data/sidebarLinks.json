@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Intro",
+    "links": [
+      { "title": "Introduction", "url": "/docs/introduction" }
+    ]
+  },
+  {
+    "title": "Concepts",
+    "links": [
+      { "title": "Props", "url": "/docs/props" },
+      { "title": "Providers", "url": "/docs/providers" },
+      { "title": "Factory & Instance", "url": "/docs/factory-instance" }
+    ]
+  },
+  {
+    "title": "Getting started",
+    "links": [
+      { "title": "Quick start", "url": "/docs/quickstart" }
+    ]
+  },
+  {
+    "title": "Examples",
+    "links": [
+      { "title": "React: Counter", "url": "/docs/examples/react-counter" },
+      { "title": "React: Fetch Request", "url": "/docs/examples/react-fetch-request" },
+      { "title": "React: Redux", "url": "/docs/examples/react-redux" },
+      { "title": "React: RxJS", "url": "/docs/examples/react-rxjs" },
+      { "title": "Vue.js: Counter", "url": "/docs/examples/vue-counter" }
+    ]
+  },
+  {
+    "title": "Advanced",
+    "links": [
+      { "title": "Lifecycle", "url": "/docs/lifecycle" },
+      { "title": "Testing", "url": "/docs/testing" }
+    ]
+  },
+  {
+    "title": "Packages",
+    "links": [
+      { "title": "proppy", "url": "/docs/packages/proppy" },
+      { "title": "proppy-react", "url": "/docs/packages/proppy-react" },
+      { "title": "proppy-vue", "url": "/docs/packages/proppy-vue" },
+      { "title": "proppy-redux", "url": "/docs/packages/proppy-redux" },
+      { "title": "proppy-rx", "url": "/docs/packages/proppy-rx" }
+    ]
+  },
+  {
+    "title": "Project",
+    "links": [
+      { "title": "Change Log", "url": "/docs/changelog" },
+      { "title": "Contribution Guide", "url": "/docs/contributing" },
+      { "title": "FAQ", "url": "/docs/faq" }
+    ]
+  }
+]

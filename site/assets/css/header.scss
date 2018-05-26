@@ -1,0 +1,48 @@
+.hero {
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: 100;
+  }
+
+  .subtitle,
+  .title {
+    color: #777 !important;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  .brand {
+
+  }
+
+  .hero-body {
+    .button {
+      border-radius: 50px;
+      padding: 0px 24px;
+      margin: 0 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0px;
+      height: 48px;
+    }
+
+    .button.is-primary {
+      background: #f6566c;
+      box-shadow: 5px 5px 50px #e4498e;
+    }
+
+    .button.is-transparent {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="menu-container docs">
+  <aside class="menu docs">
+    <% data.sidebarLinks.forEach(function (parentItem) { %>
+    <p class="menu-label">
+      <%= parentItem.title %>
+    </p>
+
+    <ul class="menu-list">
+      <% parentItem.links.forEach(function (link) { %>
+      <li>
+        <a href="<%= link.url %>">
+          <%= link.title %>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+    <% }) %>
+  </aside>
+</div>

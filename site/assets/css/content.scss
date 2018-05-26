@@ -1,0 +1,112 @@
+.content.main {
+  font-size: 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+  }
+
+  a.permalink {
+    color: inherit;
+  }
+
+  a {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    &,
+    & code {
+      background-color: rgba(187,239,253,0.3);
+      color: #1a1a1a;
+    }
+
+    &:hover {
+      background-color: #bbeffd;
+      border-bottom-color: #1a1a1a;
+    }
+
+    &.has-image {
+      background: none;
+      color: transparent;
+      border: none;
+    }
+  }
+
+  &.column {
+    p a,
+    li a {
+      // border-bottom: 1px solid #ccc;
+      font-weight: 600;
+    }
+  }
+
+  h1 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+    font-size: 36px !important;
+    line-height: 50px !important;
+  }
+
+  h2 {
+    font-size: 32px !important;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+  }
+
+  p > code {
+    color: inherit;
+  }
+}
+
+// resetting bulma for prism themes
+pre,
+pre[class*="language-"] {
+  padding: 0;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+
+  .tag {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    color: auto;
+    display: inline-block;
+    font-size: 100%;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .number {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    display: inline-block;
+    font-size: 100%;
+    height: auto;
+    justify-content: center;
+    margin-right: 0;
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+pre[class*="language-"] {
+  border: 1px solid #f6e4cc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  background: #afd5fe;
+}

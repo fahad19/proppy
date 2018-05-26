@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> | ProppyJS</title>
+    <%= renderPartial('assets_head') %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <%= renderPartial('navLinks') %>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <%= renderPartial(sidebarPartial) %>
+          </div>
+
+          <div class="column content main">
+            <%= contents %>
+
+            <div class="paging">
+              <div class="tile">
+                <div class="tile is-half">
+                  <% if (prevLink && prevLink.title) { %>
+                  <a class="prev" href="<%= prevLink.url %>">
+                    <i class="fa fa-arrow-left"></i>
+
+                    <span class="label">Previous</span>
+
+                    <span class="title"><%= prevLink.title %></span>
+                  </a>
+                  <% } %>
+                </div>
+
+                <div class="tile is-half">
+                  <% if (nextLink && nextLink.title) { %>
+                  <a class="next" href="<%= nextLink.url %>">
+                    <i class="fa fa-arrow-right"></i>
+
+                    <span class="label">Next</span>
+
+                    <span class="title"><%= nextLink.title %></span>
+                  </a>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%= renderPartial('footer') %>
+
+    <%= renderPartial('assets_body') %>
+  </body>
+</html>
