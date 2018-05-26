@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "transform-export-extensions",
+    "transform-object-rest-spread"
+  ]
+}

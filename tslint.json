@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "arrow-parens": false,
+    "interface-name": false,
+    "no-empty": false,
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": false,
+    "only-arrow-functions": false,
+    "ordered-imports": false,
+    "quotemark": false,
+    "space-before-function-paren": false,
+    "trailing-comma": false,
+    "variable-name": false
+  }
+}
