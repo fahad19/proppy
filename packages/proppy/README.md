@@ -259,7 +259,7 @@ function reducer(state, action) {
   }
 }
 
-const P = withReducer('counter', 'dispatch', 'reducer', { value: 0 });
+const P = withReducer('counter', 'dispatch', reducer, { value: 0 });
 const p = P();
 
 p.dispatch({ type: 'INCREMENT' });
