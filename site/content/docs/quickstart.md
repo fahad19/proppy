@@ -44,7 +44,7 @@ const P = withProps({ counter: 1 });
 
 ### Instances
 
-Now we can get an instance from our factory funciton by calling it:
+Now we can get an instance from our factory function by calling it:
 
 ```js
 const p = P();
@@ -81,7 +81,7 @@ p.destroy();
 
 ## Dynamic props
 
-There are times when your props require a bit of interactivity. Imagine your component wants to render the current state of `counter`, but also want to be able to update the value?
+There are times when your props require a bit of interactivity. Imagine your component wants to render the current state of `counter`, but also want to be able to update the value.
 
 We can achieve that using the `withState` function for example:
 
