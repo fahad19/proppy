@@ -33,7 +33,8 @@
     "title": "Advanced",
     "links": [
       { "title": "Lifecycle", "url": "/docs/lifecycle" },
-      { "title": "Testing", "url": "/docs/testing" }
+      { "title": "Testing", "url": "/docs/testing" },
+      { "title": "Bundling", "url": "/docs/bundling" }
     ]
   },
   {
