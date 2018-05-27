@@ -42,6 +42,7 @@
       { "title": "proppy", "url": "/docs/packages/proppy" },
       { "title": "proppy-react", "url": "/docs/packages/proppy-react" },
       { "title": "proppy-vue", "url": "/docs/packages/proppy-vue" },
+      { "title": "proppy-preact", "url": "/docs/packages/proppy-preact" },
       { "title": "proppy-redux", "url": "/docs/packages/proppy-redux" },
       { "title": "proppy-rx", "url": "/docs/packages/proppy-rx" }
     ]
