@@ -358,6 +358,8 @@ const P = withObservable((props, providers) => {
 });
 ```
 
+For advanced usage, look into [`proppy-rx`](/docs/packages/proppy-rx) package, where you can also access incoming props as an Observable.
+
 ## withTimer
 
 > withTimer(timer, props)
