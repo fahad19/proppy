@@ -68,7 +68,8 @@ pre[class*="language-"] {
   border: 1px solid #eee;
   border-radius: 2px;
   margin-bottom: 15px;
-  font-size: 0.9rem;
+  font-size: 13px;
+  line-height: 18px;
 
   .tag {
     align-items: center;
@@ -79,7 +80,7 @@ pre[class*="language-"] {
     font-size: 100%;
     height: auto;
     justify-content: center;
-    line-height: 1.5;
+    line-height: 18px;
     padding-left: 0;
     padding-right: 0;
     vertical-align: top;
@@ -109,4 +110,22 @@ pre[class*="language-"] {
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   background: #afd5fe;
+}
+
+.line-highlight {
+  margin-top: 18px;
+  min-height: 24px;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+pre[class*="language-"] {
+  &,
+  & code,
+  .line-highlight {
+    line-height: 18px;
+  }
 }

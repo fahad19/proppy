@@ -194,13 +194,3 @@ h6, .content h6 {
     }
   }
 }
-
-.line-highlight {
-  margin-top: 16px;
-  min-height: 24px;
-
-  &:before,
-  &:after {
-    display: none;
-  }
-}
