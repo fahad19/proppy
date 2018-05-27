@@ -51,6 +51,7 @@
   {
     "title": "Project",
     "links": [
+      { "title": "API", "url": "/docs/api" },
       { "title": "Change Log", "url": "/docs/changelog" },
       { "title": "Contribution Guide", "url": "/docs/contributing" },
       { "title": "FAQ", "url": "/docs/faq" }
