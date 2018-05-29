@@ -99,7 +99,30 @@ Vue.js doesn't require this since you can use their provide/inject API. See [pro
 
 These functions are used to connect your ProppyJS factory to your Components:
 
-```js
+<div class="tabs for-snippet is-boxed">
+  <ul>
+    <li class="is-active">
+      <a href="#hoc-react">
+        <span>React</span>
+      </a>
+    </li>
+    <li>
+      <a href="#hoc-preact">
+        <span>Preact</span>
+      </a>
+    </li>
+    <li>
+      <a href="#hoc-vue">
+        <span>Vue.js</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="snippet-contents">
+
+<pre id="hoc-react" class="language-js">
+```
 import React from 'react';
 import { compose, withProps, withState } from 'proppy';
 import { attach } from 'proppy-react';
@@ -123,6 +146,66 @@ function MyComponent({ foo, counter, setCounter }) {
 
 export default attach(P)(MyComponent);
 ```
+</pre>
+
+<pre id="hoc-preact" class="language-js">
+```
+import { h } from 'preact';
+import { compose, withProps, withState } from 'proppy';
+import { attach } from 'proppy-preact';
+
+const P = compose(
+  withProps({ foo: 'foo value' }),
+  withState('counter', 'setCounter', 0)
+);
+
+function MyComponent({ foo, counter, setCounter }) {
+  return (
+    <div>
+      <p>Counter: {counter}</p>
+
+      <button onClick={() => setCounter(counter + 1)}>
+        Increment
+      </button>
+    </div>
+  );
+}
+
+export default attach(P)(MyComponent);
+```
+</pre>
+
+<pre id="hoc-vue" class="language-js">
+```
+import { compose, withProps, withState } from 'proppy';
+import { attach } from 'proppy-vue';
+
+const P = compose(
+  withProps({ foo: 'foo value' }),
+  withState('counter', 'setCounter', 0)
+);
+
+const MyComponent = {
+  props: ['foo', 'counter', 'setCounter'],
+
+  render(h) {
+    return (
+      <div>
+        <p>Counter: {counter}</p>
+
+        <button onClick={() => setCounter(counter + 1)}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+};
+
+export default attach(P)(MyComponent);
+```
+</pre>
+
+</div>
 
 | HoC                                                             | Package            |                           |
 |-----------------------------------------------------------------|--------------------|---------------------------|

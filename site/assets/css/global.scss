@@ -194,3 +194,38 @@ h6, .content h6 {
     }
   }
 }
+
+.tabs.for-snippet {
+  margin: 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+
+    li {
+      a {
+        background: none;
+        margin-bottom: 0;
+        color: #666;
+
+        &:hover {
+          border-bottom: 1px solid #f6e4cc;
+        }
+      }
+
+      &.is-active a {
+        background: #f6e4cc;
+        border-color: #f6e4cc;
+        color: #000;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  & + .snippet-contents pre {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+  }
+}
