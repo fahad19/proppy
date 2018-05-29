@@ -1,6 +1,6 @@
 {
   "name": "proppy",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ProppyJS - Functional composition of props for components",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy",
@@ -27,7 +27,6 @@
   "keywords": [
     "proppy"
   ],
-  "dependencies": {},
   "devDependencies": {
     "rxjs": "^6.1.0"
   },
