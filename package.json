@@ -6,6 +6,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "test": "lerna run test",
+    "cover": "lerna run cover",
     "lint": "lerna run lint",
     "transpile": "lerna run transpile",
     "clean": "lerna run clean",
