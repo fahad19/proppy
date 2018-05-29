@@ -137,21 +137,19 @@
 
   // snippet tabs
   $('.tabs.for-snippet').each(function () {
-    $tabs = $(this);
-
-    $tabs.find('a').on('click', function (e) {
+    $(this).find('li a').on('click', function (e) {
       e.preventDefault();
 
       const contentSelector = $(this).attr('href');
-      $tabs.find('li').removeClass('is-active');
+      $(this).parents('ul').find('li').removeClass('is-active');
       $(this).parent().addClass('is-active');
 
-      $tabs.next().find('pre').hide();
-      $tabs.next().find(contentSelector).show();
+      $(this).parents('.tabs').next().find('pre').hide();
+      $(this).parents('.tabs').next().find(contentSelector).show();
 
       return false;
     });
 
-    $tabs.find('a').first().trigger('click');
+    $(this).find('a').first().trigger('click');
   });
 })();

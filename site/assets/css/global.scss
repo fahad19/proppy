@@ -205,6 +205,12 @@ h6, .content h6 {
     border-bottom: 0;
 
     li {
+      &:first-child {
+        a {
+          margin-bottom: -2px;
+        }
+      }
+
       a {
         background: none;
         margin-bottom: 0;
@@ -219,7 +225,7 @@ h6, .content h6 {
         background: #f6e4cc;
         border-color: #f6e4cc;
         color: #000;
-        margin-bottom: -1px;
+        // margin-bottom: -1px;
       }
     }
   }

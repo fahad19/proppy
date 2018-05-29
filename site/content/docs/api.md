@@ -72,7 +72,30 @@ console.log(p.props);
 
 These components help set application-wide providers.
 
-```js
+<div class="tabs for-snippet is-boxed">
+  <ul>
+    <li class="is-active">
+      <a href="#providers-react">
+        <span>React</span>
+      </a>
+    </li>
+    <li>
+      <a href="#providers-preact">
+        <span>Preact</span>
+      </a>
+    </li>
+    <li>
+      <a href="#providers-vue">
+        <span>Vue.js</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="snippet-contents">
+
+<pre id="providers-react" class="language-js">
+```
 // components/Root.js
 import React from 'react';
 import { ProppyProvider } from 'proppy-react';
@@ -87,6 +110,45 @@ export default function Root() {
   );
 }
 ```
+</pre>
+
+<pre id="providers-preact" class="language-js">
+```
+// components/Root.js
+import { h } from 'preact';
+import { ProppyProvider } from 'proppy-preact';
+
+const myProviders = {};
+
+export default function Root() {
+  return (
+    <ProppyProvider providers={myProviders}>
+      <MyOtherComponent />
+    </ProppyProvider>
+  );
+}
+```
+</pre>
+
+<pre id="providers-vue" class="language-js">
+```
+// components/Root.js
+const myProviders = {};
+
+export default {
+  provide: {
+    proppy: myProviders
+  },
+
+  render(h) {
+    return <MyOtherComponent />;
+  }
+};
+```
+</pre>
+
+</div>
+
 
 Vue.js doesn't require this since you can use their provide/inject API. See [proppy-vue](../packages/proppy-vue) for more info.
 
