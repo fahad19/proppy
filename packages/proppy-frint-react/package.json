@@ -30,7 +30,8 @@
   "devDependencies": {
     "frint-config": "^5.4.3",
     "frint-react": "^5.4.3",
-    "proppy-react": "^1.0.0"
+    "proppy-react": "^1.0.0",
+    "react": "^15.3.0"
   },
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
