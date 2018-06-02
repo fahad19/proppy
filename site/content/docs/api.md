@@ -58,6 +58,7 @@ console.log(p.props);
 | [withStateHandlers](../packages/proppy#withstatehandlers)       | [proppy]           | State with handlers         |
 | [withObservable](../packages/proppy#withobservable)             | [proppy]           | Props via Observable        |
 | [withTimer](../packages/proppy#withtimer)                       | [proppy]           | Scheduled async props       |
+| [onChange](../packages/proppy#onchange)                         | [proppy]           | Handle prop changes         |
 | [emit](../packages/proppy#emit)                                 | [proppy]           | Emit props asynchronously   |
 | [map](../packages/proppy#map)                                   | [proppy]           | Map props                   |
 | [shouldUpdate](../packages/proppy#shouldupdate)                 | [proppy]           | [Lifecycle]                 |

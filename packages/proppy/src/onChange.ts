@@ -17,7 +17,7 @@ export function onChange(propName, fn): ProppyFactory {
       }
 
       const detector = typeof propName === 'string'
-        ? (p, n) => p[propName] === n[propName]
+        ? (p, n) => p[propName] !== n[propName]
         : propName;
 
       if (detector(this._prevProps, parentProps)) {

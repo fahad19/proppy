@@ -19,6 +19,7 @@ export { withReducer } from './withReducer';
 export { withState } from './withState';
 export { withStateHandlers } from './withStateHandlers';
 export { withTimer } from './withTimer';
+export { onChange } from './onChange';
 export { didSubscribe } from './didSubscribe';
 export { willDestroy } from './willDestroy';
 export { emit } from './emit';
