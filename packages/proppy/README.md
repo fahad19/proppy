@@ -389,7 +389,7 @@ const P = withTimer(100, (props, providers) => ({
 > onChange(propName, (prop, providers) => props)
 
 > onChange(
->   (prevProps, nextProps) => props,
+>   (prevProps, nextProps) => true,
 >   (props, providers) => props
 > )
 
