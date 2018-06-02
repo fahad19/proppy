@@ -169,7 +169,7 @@ const P = compose(
   withProps({ foo: 'foo value' }),
 
   // `withProps` can also generate props using a function
-  withprops((props, providers) => {
+  withProps((props, providers) => {
     return {
       name: providers.appname
     };
