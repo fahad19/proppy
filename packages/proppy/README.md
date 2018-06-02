@@ -22,6 +22,7 @@
   - [withStateHandlers](#withstatehandlers)
   - [withObservable](#withobservable)
   - [withTimer](#withtimer)
+  - [onChange](#onchange)
   - [map](#map)
   - [shouldUpdate](#shouldupdate)
   - [didSubscribe](#didsubscribe)
@@ -381,6 +382,52 @@ Accessing current props and providers:
 const P = withTimer(100, (props, providers) => ({
   foo: 'foo value',
 }));
+```
+
+## onChange
+
+> onChange(propName, (prop, providers) => props)
+
+> onChange(
+>   (prevProps, nextProps) => true,
+>   (props, providers) => props
+> )
+
+Detect a change in props, and return new props.
+
+**Examples:**
+
+Change `foo`, when `counter` changes:
+
+```js
+const P = compose(
+  withProps({ foo: 'initial foo value' })
+  withState('counter', 'setCounter', 0),
+  onChange('counter', (props, providers) => ({
+    foo: `changed foo with counter ${props.counter}`
+  }))
+);
+
+const p = P();
+console.log(p.props.foo); // `initial foo value`
+
+p.props.setCounter(10);
+console.log(p.props.foo); // `changed foo with counter 10`
+```
+
+Detecting complex changes:
+
+```js
+const P = compose(
+  withState('counter', 'setCounter', 0),
+  onChange(
+    // detect
+    (prevProps, nextProps) => true,
+
+    // return props
+    (props, providers) => props
+  )
+);
 ```
 
 ## map
