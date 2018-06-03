@@ -45,4 +45,23 @@ describe('proppy :: onChange', () => {
     p.props.setCounter(5);
     expect(p.props.foo).toEqual('changed foo with counter 5');
   });
+
+  test('changes by string, returning async props', () => {
+    const P = compose(
+      withState('foo', 'setFoo', 'initial foo'),
+      withState('counter', 'setCounter', 0),
+      onChange('counter', (props, providers, cb) => {
+        cb({
+          foo: `changed foo with counter ${props.counter}`
+        });
+      }),
+    );
+    const p = P();
+
+    expect(p.props.foo).toEqual('initial foo');
+    expect(p.props.counter).toEqual(0);
+
+    p.props.setCounter(5);
+    expect(p.props.foo).toEqual('changed foo with counter 5');
+  });
 });
