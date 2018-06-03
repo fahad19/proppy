@@ -1,5 +1,17 @@
 # Change Log
 
+## v1.2.0 (2018-06-03)
+
+#### Pull Requests
+* `proppy`
+  * [#8](https://github.com/fahad19/proppy/pull/8) proppy: return async props from `onChange`. ([@fahad19](https://github.com/fahad19))
+* Other
+  * [#7](https://github.com/fahad19/proppy/pull/7) Fixes typo. ([@sobolevn](https://github.com/sobolevn))
+
+#### Committers: 2
+- Fahad Ibnay Heylaal ([fahad19](https://github.com/fahad19))
+- Nikita Sobolev ([sobolevn](https://github.com/sobolevn))
+
 ## v1.1.0 (2018-06-02)
 
 #### Pull Requests
