@@ -393,6 +393,11 @@ const P = withTimer(100, (props, providers) => ({
 >   (props, providers) => props
 > )
 
+> onChange(
+>   propName,
+>   (props, providers, cb) => void
+> )
+
 Detect a change in props, and return new props.
 
 **Examples:**
@@ -426,6 +431,23 @@ const P = compose(
 
     // return props
     (props, providers) => props
+  )
+);
+```
+
+Returning async props:
+
+```js
+const P = compose(
+  withState('counter', 'setCounter', 0),
+  onChange(
+    // detect
+    (prevProps, nextProps) => true,
+
+    // return props by callback
+    (props, providers, cb) => {
+      cb(props);
+    }
   )
 );
 ```

@@ -21,7 +21,12 @@ export function onChange(propName, fn): ProppyFactory {
         : propName;
 
       if (detector(this._prevProps, parentProps)) {
-        this.set(fn(parentProps, this.providers));
+        const cb = newProps => this.set(newProps);
+        const result = fn(parentProps, this.providers, cb);
+
+        if (result) {
+          this.set(result);
+        }
       }
     },
   });
