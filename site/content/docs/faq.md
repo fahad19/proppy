@@ -10,6 +10,8 @@ sidebarPartial: docsSidebar
 - [What is the primary feature of Proppy?](#what-is-the-primary-feature-of-proppy)
 - [Can I use Proppy with React, Vue.js, and Preact?](#can-i-use-proppy-with-react-vuejs-and-preact)
 - [Is Proppy a Redux alternative?](#is-proppy-a-redux-alternative)
+- [How is it different than Redux?](#how-is-it-different-than-redux)
+- [What is the difference between Proppy and Recompose?](#what-is-the-difference-between-proppy-and-recompose)
 - [Can I use RxJS with Proppy?](#can-i-use-rxjs-with-proppy)
 - [Is there any cost in performance?](#is-there-any-cost-in-performance)
 
@@ -30,6 +32,29 @@ Yes! We have integrations for all of them:
 ## Is Proppy a Redux alternative?
 
 Not at all. We have an integration package for ease of Redux usage too: [`proppy-redux`](../packages/proppy-redux).
+
+## How is it different than Redux?
+
+[Redux](https://redux.js.org/) is meant for state management for your whole application, based on actions and reducers.
+
+Proppy is aimed at lifting the logic one level above your Components, and only deal with the behaviour of their props.
+
+While [react-redux](https://github.com/reduxjs/react-redux) allows you to access your single Store from anywhere in the components tree, Proppy allows you to access [providers](../providers).
+
+And the Redux store, for example, can be one of the providers here.
+
+Proppy is unopinionated about what you use for your application's state management, and doesn't lock you in to any specific state management or rendering library.
+
+## What is the difference between Proppy and Recompose?
+
+[Recompose](https://github.com/acdlite/recompose) has been the original inspiration for building ProppyJS.
+
+A few key differences:
+
+* Not tied to any rendering libraries (like React or Vue.js)
+* Allows access to application-wide dependencies (like Redux store, config, etc)
+* Deals with only props generation
+* Doesn’t create a new component in tree per function
 
 ## Can I use RxJS with Proppy?
 
