@@ -55,13 +55,15 @@
 
 ProppyJS is a tiny `1.5kB` JavaScript library for composing props (object that components receive to render themselves).
 
+It comes with various integration packages giving you the freedom to use it popular rendering libraries.
+
 # What does it do?
 
 [![ProppyJS flow of props](./site/assets/img/proppy-flow.gif)](https://proppyjs.com)
 
-The idea is you express the behaviour of your Component as props first, and then connect it to your Component.
+The idea is you express the behaviour of your Component as props first, and then connect it to your Component (which can be either React, Vue.js or Preact) using the same API of Proppy.
 
-The composition can then be connected to your favourite components-based UI framework (like React, Vue.js, or Preact) using the same API.
+The API gives you access to other application-wide dependencies too (like a store using Redux) for convenience anywhere in the components tree.
 
 # Packages
 
