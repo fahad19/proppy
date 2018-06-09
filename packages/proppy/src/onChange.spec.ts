@@ -45,6 +45,15 @@ describe('proppy :: onChange', () => {
     p.props.setCounter(5);
     expect(p.props.counter).toEqual(5);
     expect(p.props.foo).toEqual('changed foo with counter 5');
+
+    // should still be same since no change
+    p.props.setCounter(5);
+    expect(p.props.counter).toEqual(5);
+    expect(p.props.foo).toEqual('changed foo with counter 5');
+
+    p.props.setCounter(10);
+    expect(p.props.counter).toEqual(10);
+    expect(p.props.foo).toEqual('changed foo with counter 10');
   });
 
   test('changes by string, returning async props', () => {
