@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.2.1 (2018-06-09)
+
+#### Pull Requests
+* `proppy`
+  * [#10](https://github.com/fahad19/proppy/pull/10) Fix for onChange. ([@fahad19](https://github.com/fahad19))
+
+#### Committers: 1
+- Fahad Ibnay Heylaal ([fahad19](https://github.com/fahad19))
+
 ## v1.2.0 (2018-06-03)
 
 #### Pull Requests
