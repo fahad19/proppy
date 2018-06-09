@@ -355,6 +355,8 @@ You can do the same with Vue.js and Preact too via [`proppy-vue`](https://proppy
 
 Original inspiration for this project has been [`recompose`](https://github.com/acdlite/recompose). If your project is using React, you should definitely check it out.
 
+Learn more about the differences between Proppy and other libraries (like Redux and Recompose) in our [FAQ page](https://proppyjs.com/docs/faq/).
+
 # License
 
 MIT
