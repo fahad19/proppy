@@ -43,6 +43,7 @@ describe('proppy :: onChange', () => {
     expect(p.props.counter).toEqual(0);
 
     p.props.setCounter(5);
+    expect(p.props.counter).toEqual(5);
     expect(p.props.foo).toEqual('changed foo with counter 5');
   });
 
