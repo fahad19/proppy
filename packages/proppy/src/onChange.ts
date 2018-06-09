@@ -5,6 +5,7 @@ export function onChange(propName, fn): ProppyFactory {
   return create({
     initialize() {
       this._prevProps = this.props;
+      this._own = {};
 
       this._i = false;
     },
@@ -20,14 +21,22 @@ export function onChange(propName, fn): ProppyFactory {
         ? (p, n) => p[propName] !== n[propName]
         : propName;
 
+      this.set(Object.assign({}, parentProps, this._own));
+
+      const cb = newProps => {
+        this._own = newProps;
+        this.set(newProps);
+      };
+
       if (detector(this._prevProps, parentProps)) {
-        const cb = newProps => this.set(newProps);
         const result = fn(parentProps, this.providers, cb);
 
         if (result) {
-          this.set(result);
+          cb(result);
         }
       }
+
+      this._prevProps = this.props;
     },
   });
 }
