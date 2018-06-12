@@ -21,6 +21,10 @@
     <img src="https://img.shields.io/travis/fahad19/proppy/master.svg?style=flat-square"
       alt="Build Status" />
   </a>
+  <!-- Gitter -->
+  <a href="https://gitter.im/proppyjs/proppy">
+    <img src="https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg" alt="Gitter" />
+  </a>
 </div>
 
 <div align="center">
