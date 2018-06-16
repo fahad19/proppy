@@ -1,6 +1,6 @@
 {
   "name": "proppy-preact",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Preact integration with ProppyJS",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-preact",
@@ -29,7 +29,7 @@
   ],
   "devDependencies": {
     "preact": "^8.2.9",
-    "proppy": "^1.2.1"
+    "proppy": "^1.2.2"
   },
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
