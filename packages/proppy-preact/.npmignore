@@ -1,5 +1,4 @@
 package-lock.json
 coverage
-src
 dist
 !lib
