@@ -1,5 +1,16 @@
 # Change Log
 
+## v1.2.2 (2018-06-16)
+
+#### Pull Requests
+* `proppy-frint-react`, `proppy-preact`, `proppy-react`, `proppy-redux`, `proppy-rx`, `proppy-vue`, `proppy`
+  * [#15](https://github.com/fahad19/proppy/pull/15) Include src when publishing to npm. ([@fahad19](https://github.com/fahad19))
+* Other
+  * [#11](https://github.com/fahad19/proppy/pull/11) Examples: ReactJS Playground. ([@fahad19](https://github.com/fahad19))
+
+#### Committers: 1
+- Fahad Ibnay Heylaal ([fahad19](https://github.com/fahad19))
+
 ## v1.2.1 (2018-06-09)
 
 #### Pull Requests
