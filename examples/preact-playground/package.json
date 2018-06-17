@@ -3,8 +3,17 @@
   "description": null,
   "version": "0.0.16",
   "dependencies": {
+    "history": "^4.7.0",
+    "preact": "8.2.5",
     "preact-compat": "3.17.0",
-    "preact": "8.2.5"
+    "proppy": "^1.2.1",
+    "proppy-preact": "^1.0.0",
+    "proppy-redux": "^1.0.0",
+    "proppy-rx": "^1.0.0",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
+    "redux": "^4.0.0",
+    "rxjs": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
