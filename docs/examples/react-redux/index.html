@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example: React + Redux with and without Proppy | ProppyJS</title>
+    <link rel="icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+<link rel="shortcut icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+
+<!-- meta -->
+
+<meta name="description" content="ProppyJS: JavaScript library for functional composition of props for UI components" />
+
+
+
+<meta name="keywords" content="javascript, library, react.js, vue.js, preact, rxjs, composition, props, framework" />
+
+
+
+<!-- og -->
+
+<meta property="og:title" content="ProppyJS: Functional props composition for UI components" />
+
+
+
+<meta property="og:description" content="ProppyJS is a tiny 1.5kB JavaScript library for functionally composing props for your UI components. Supporting integrations with React.js, Vue.js, Preact, Redux, and RxJS." />
+
+
+
+<meta property="og:image" content="/img/proppy-og.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@fahad19" />
+
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-start">
+  <a href="/" class="navbar-item brand">
+    <img alt="ProppyJS" src="/img/logo-transparent-128.png" />
+    <img alt="ProppyJS" src="/img/logo-text-80.png" />
+  </a>
+</div>
+
+<div class="navbar-end">
+  <a href="/docs/introduction" class="navbar-item is-tab">
+    Documentation
+  </a>
+
+  <a href="/docs/api" class="navbar-item is-tab">
+    API
+  </a>
+
+  <a href="/docs/playground" class="navbar-item is-tab">
+    Playground
+  </a>
+
+  <a href="https://github.com/fahad19/proppy" class="navbar-item is-tab">
+    GitHub
+  </a>
+</div>
+
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <div class="menu-container docs">
+  <aside class="menu docs">
+    
+    <p class="menu-label">
+      Intro
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/introduction">
+          Introduction
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Concepts
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/props">
+          Props
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/providers">
+          Providers
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/factory-instance">
+          Factory & Instance
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Getting started
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/quickstart">
+          Quick start
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Examples
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/examples/react-counter">
+          React: Counter
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-fetch-request">
+          React: Fetch Request
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-redux">
+          React: Redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-rxjs">
+          React: RxJS
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/vue-counter">
+          Vue.js: Counter
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Advanced
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/lifecycle">
+          Lifecycle
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/testing">
+          Testing
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/bundling">
+          Bundling
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Packages
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/packages/proppy">
+          proppy
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-react">
+          proppy-react
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-vue">
+          proppy-vue
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-preact">
+          proppy-preact
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-redux">
+          proppy-redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-rx">
+          proppy-rx
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Project
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/api">
+          API
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/playground">
+          Playground
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/changelog">
+          Change Log
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/contributing">
+          Contribution Guide
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/faq">
+          FAQ
+        </a>
+      </li>
+      
+    </ul>
+    
+  </aside>
+</div>
+
+          </div>
+
+          <div class="column content main">
+            <h1 id="example-react-redux-with-and-without-proppy">Example: React + Redux with and without Proppy</h1>
+<!-- MarkdownTOC autolink=true bracket=round -->
+<ul>
+<li><a href="#without-proppy">Without Proppy</a><ul>
+<li><a href="#store-as-a-provider">Store as a provider</a></li>
+<li><a href="#connect-hoc">Connect HoC</a></li>
+</ul>
+</li>
+<li><a href="#with-proppy">With Proppy</a><ul>
+<li><a href="#set-store-as-a-provider">Set store as a provider</a></li>
+<li><a href="#attach-hoc">Attach HoC</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>A basic example of a React component:</p>
+<ul>
+<li>Showing <code>counter</code> coming from Redux store</li>
+<li>An <code>Increment</code> button dispatching an action creator</li>
+<li>Re-rendering on state changes only if <code>counter</code> is an even number</li>
+</ul>
+<h2 id="without-proppy">Without Proppy</h2>
+<h3 id="store-as-a-provider">Store as a provider</h3>
+<pre><code class="lang-js">// components/Root.js
+import React from &#39;react&#39;;
+import { Provider } from &#39;react-redux&#39;;
+
+import MyComponent from &#39;./MyComponent&#39;;
+
+const store = reduxStore;
+
+export default function Root() {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;MyComponent /&gt;
+    &lt;/Provider&gt;
+  )
+}
+</code></pre>
+<h3 id="connect-hoc">Connect HoC</h3>
+<pre><code class="lang-js">// components/MyComponent.js
+import React from &#39;react&#39;;
+import { connect } from &#39;react-redux&#39;;
+
+import { incrementCounter } from &#39;../actions/counter&#39;;
+
+class MyComponent extends React.Component {
+  // re-render only if `counter` is an even number
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.counter % 2 !== 0) {
+      return false;
+    }
+
+    return true;
+  }
+
+  render() {
+    const { counter, increment } = this.props;
+
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Counter: {counter}&lt;/p&gt;
+
+        &lt;button onClick={increment}&gt;
+          Increment
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+function mapState(state) {
+  return {
+    counter: state.counter.value
+  };
+}
+
+const mapDispatch = {
+  increment: incrementCounter
+};
+
+export default connect(mapState, mapDispatch)(MyComponent);
+</code></pre>
+<h2 id="with-proppy">With Proppy</h2>
+<p>Using <code>proppy-redux</code> package:</p>
+<h3 id="set-store-as-a-provider">Set store as a provider</h3>
+<pre><code class="lang-js">// components/Root.js
+import React from &#39;react&#39;;
+import { ProppyProvider } from &#39;proppy-react&#39;;
+
+import MyComponent from &#39;./MyComponent&#39;;
+
+const providers = {
+  store: reduxStore
+};
+
+export default function Root() {
+  return (
+    &lt;ProppyProvider providers={providers}&gt;
+      &lt;MyComponent /&gt;
+    &lt;/ProppyProvider&gt;
+  )
+}
+</code></pre>
+<h3 id="attach-hoc">Attach HoC</h3>
+<p>Apply the <code>attach</code> higher-order component:</p>
+<pre><code class="lang-js">// components/MyComponent.js
+import React from &#39;react&#39;;
+import { compose, shouldUpdate } from &#39;proppy&#39;;
+import { withStore } from &#39;proppy-redux&#39;;
+import { attach } from &#39;proppy-react&#39;;
+
+import { incrementCounter } from &#39;../actions/counter&#39;;
+
+const P = compose(
+  withStore(
+    state =&gt; ({ counter: state.counter.value }),
+    { increment: incrementCounter }
+  ),
+  shouldUpdate((prevProps, nextProps) =&gt; nextProps.counter % 2 === 0)
+);
+
+function MyComponent({ counter, increment }) {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Counter: {counter}&lt;/p&gt;
+
+      &lt;button onClick={increment}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default attach(P)(MyComponent);
+</code></pre>
+
+
+            <div class="paging">
+              <div class="tile">
+                <div class="tile is-half">
+                  
+                  <a class="prev" href="/docs/examples/react-fetch-request">
+                    <i class="fa fa-arrow-left"></i>
+
+                    <span class="label">Previous</span>
+
+                    <span class="title">React: Fetch Request</span>
+                  </a>
+                  
+                </div>
+
+                <div class="tile is-half">
+                  
+                  <a class="next" href="/docs/examples/react-rxjs">
+                    <i class="fa fa-arrow-right"></i>
+
+                    <span class="label">Next</span>
+
+                    <span class="title">React: RxJS</span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Built with ❤︎ by <a href="https://twitter.com/fahad19">@fahad19</a> and <a href="https://github.com/fahad19/proppy/graphs/contributors">contributors</a>.
+      </p>
+
+      <p class="social-icons">
+        <a class="icon" title="GitHub" href="https://github.com/fahad19/proppy">
+          <i class="fa fa-github"></i>
+        </a>
+
+        <a class="icon" title="Twitter" href="https://twitter.com/proppyjs">
+          <i class="fa fa-twitter"></i>
+        </a>
+
+        <!--<a class="icon" title="Medium" href="https://medium.com/proppyjs">
+          <i class="fa fa-medium"></i>
+        </a>-->
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-solarizedlight.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="/js/site.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-119531648-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

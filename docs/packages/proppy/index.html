@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>proppy | ProppyJS</title>
+    <link rel="icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+<link rel="shortcut icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+
+<!-- meta -->
+
+<meta name="description" content="ProppyJS: JavaScript library for functional composition of props for UI components" />
+
+
+
+<meta name="keywords" content="javascript, library, react.js, vue.js, preact, rxjs, composition, props, framework" />
+
+
+
+<!-- og -->
+
+<meta property="og:title" content="ProppyJS: Functional props composition for UI components" />
+
+
+
+<meta property="og:description" content="ProppyJS is a tiny 1.5kB JavaScript library for functionally composing props for your UI components. Supporting integrations with React.js, Vue.js, Preact, Redux, and RxJS." />
+
+
+
+<meta property="og:image" content="/img/proppy-og.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@fahad19" />
+
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-start">
+  <a href="/" class="navbar-item brand">
+    <img alt="ProppyJS" src="/img/logo-transparent-128.png" />
+    <img alt="ProppyJS" src="/img/logo-text-80.png" />
+  </a>
+</div>
+
+<div class="navbar-end">
+  <a href="/docs/introduction" class="navbar-item is-tab">
+    Documentation
+  </a>
+
+  <a href="/docs/api" class="navbar-item is-tab">
+    API
+  </a>
+
+  <a href="/docs/playground" class="navbar-item is-tab">
+    Playground
+  </a>
+
+  <a href="https://github.com/fahad19/proppy" class="navbar-item is-tab">
+    GitHub
+  </a>
+</div>
+
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <div class="menu-container docs">
+  <aside class="menu docs">
+    
+    <p class="menu-label">
+      Intro
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/introduction">
+          Introduction
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Concepts
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/props">
+          Props
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/providers">
+          Providers
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/factory-instance">
+          Factory & Instance
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Getting started
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/quickstart">
+          Quick start
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Examples
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/examples/react-counter">
+          React: Counter
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-fetch-request">
+          React: Fetch Request
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-redux">
+          React: Redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-rxjs">
+          React: RxJS
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/vue-counter">
+          Vue.js: Counter
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Advanced
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/lifecycle">
+          Lifecycle
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/testing">
+          Testing
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/bundling">
+          Bundling
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Packages
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/packages/proppy">
+          proppy
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-react">
+          proppy-react
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-vue">
+          proppy-vue
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-preact">
+          proppy-preact
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-redux">
+          proppy-redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-rx">
+          proppy-rx
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Project
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/api">
+          API
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/playground">
+          Playground
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/changelog">
+          Change Log
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/contributing">
+          Contribution Guide
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/faq">
+          FAQ
+        </a>
+      </li>
+      
+    </ul>
+    
+  </aside>
+</div>
+
+          </div>
+
+          <div class="column content main">
+            <h1 id="proppy">proppy</h1>
+<p><a href="https://www.npmjs.com/package/proppy"><img src="https://img.shields.io/npm/v/proppy.svg" alt="npm"></a></p>
+<blockquote>
+<p>Functional props composition for components</p>
+</blockquote>
+<!-- MarkdownTOC autolink=true bracket=round -->
+<ul>
+<li><a href="#guide">Guide</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#single-functions">Single functions</a></li>
+<li><a href="#composition">Composition</a></li>
+<li><a href="#providers">Providers</a></li>
+<li><a href="#subscription">Subscription</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api">API</a><ul>
+<li><a href="#withprops">withProps</a></li>
+<li><a href="#withstate">withState</a></li>
+<li><a href="#compose">compose</a></li>
+<li><a href="#withreducer">withReducer</a></li>
+<li><a href="#withhandlers">withHandlers</a></li>
+<li><a href="#withstatehandlers">withStateHandlers</a></li>
+<li><a href="#withobservable">withObservable</a></li>
+<li><a href="#withtimer">withTimer</a></li>
+<li><a href="#onchange">onChange</a></li>
+<li><a href="#map">map</a></li>
+<li><a href="#shouldupdate">shouldUpdate</a></li>
+<li><a href="#didsubscribe">didSubscribe</a></li>
+<li><a href="#willdestroy">willDestroy</a></li>
+<li><a href="#emit">emit</a></li>
+<li><a href="#handlereceivedprops">handleReceivedProps</a></li>
+<li><a href="#create">create</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<hr>
+<h1 id="guide">Guide</h1>
+<h2 id="installation">Installation</h2>
+<p>With <a href="https://www.npmjs.com/">npm</a>:</p>
+<pre><code>$ npm install --save proppy
+</code></pre><p>Via <a href="https://unpkg.com">unpkg</a> CDN:</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://unpkg.com/proppy@latest/dist/proppy.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  // available as `window.Proppy`
+&lt;/script&gt;
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="single-functions">Single functions</h3>
+<p>Let&#39;s first import a function of our choice:</p>
+<pre><code class="lang-js">import { withState } from &#39;proppy&#39;;
+</code></pre>
+<p>Now we can create our factory:</p>
+<pre><code class="lang-js">const P = withState(&#39;counter&#39;, &#39;setCounter&#39;, 0);
+</code></pre>
+<p>The factory function can now be called to get the instance:</p>
+<pre><code class="lang-js">const p = P();
+</code></pre>
+<p>Accessing props:</p>
+<pre><code class="lang-js">console.log(p.props);
+// { counter: 0, setCounter: Function }
+
+p.props.setCounter(5);
+
+console.log(p.props.counter);
+// 5
+</code></pre>
+<p>Destroying the instance:</p>
+<pre><code class="lang-js">p.destroy();
+</code></pre>
+<h3 id="composition">Composition</h3>
+<p>You can also compose multiple factories together using the <code>compose</code> function:</p>
+<pre><code class="lang-js">import { compose, withProps, withState } from &#39;proppy&#39;;
+
+const P = compose(
+  withProps({ foo: &#39;foo value&#39; }),
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  withState(&#39;age&#39;, &#39;setAge&#39;, 20),
+);
+</code></pre>
+<p>You can now get your instance by calling the returned function:</p>
+<pre><code class="lang-js">const p = P();
+
+console.log(p.props);
+// {
+//   foo: &#39;foo value&#39;,
+//
+//   counter: 0,
+//   setCounter: Function,
+//
+//   age: 20,
+//   setAge: Function
+// }
+</code></pre>
+<h3 id="providers">Providers</h3>
+<p>Providers are values which are made accessible to instances.</p>
+<p>When we call our factory function to get the instance, we can optionally pass an object that will contain all our providers:</p>
+<pre><code class="lang-js">import { compose, withProps } from &#39;proppy&#39;;
+
+const P = compose(
+  // value already known
+  withprops({
+    foo: &#39;foo value&#39;,
+  }),
+
+  // value will be obtained from providers
+  withProps((props, providers) =&gt; ({
+    // `props` is `{ foo: &#39;foo value&#39; }` here
+    bar: providers.bar,
+  }),
+);
+</code></pre>
+<p>Now we can pass the <code>providers</code> object when calling <code>P</code>:</p>
+<pre><code class="lang-js">const p = P({
+  bar: &#39;bar value&#39;,
+});
+
+console.log(p.props);
+// {
+//   foo: &#39;foo value&#39;,
+//   bar: &#39;bar value&#39;,
+// }
+</code></pre>
+<h3 id="subscription">Subscription</h3>
+<p>Subscribing to props changes:</p>
+<pre><code class="lang-js">const unsubscribe = p.subscribe(props =&gt; console.log(props));
+</code></pre>
+<p>To Unsubscribe:</p>
+<pre><code class="lang-js">unsubscribe();
+</code></pre>
+<h1 id="api">API</h1>
+<h2 id="withprops">withProps</h2>
+<blockquote>
+<p>withProps(props)</p>
+</blockquote>
+<blockquote>
+<p>withProps((currentProps, providers) =&gt; props)</p>
+</blockquote>
+<p>Used for generating initial props.</p>
+<p><strong>Examples:</strong></p>
+<p>Directly passing the props object:</p>
+<pre><code class="lang-js">const P = withProps({ foo: &#39;foo value&#39; });
+</code></pre>
+<p>Returning the props from a function:</p>
+<pre><code class="lang-js">const P = withProps((currentProps, providers) =&gt; {
+  return {
+    foo: &#39;foo value&#39;
+  };
+});
+</code></pre>
+<h2 id="withstate">withState</h2>
+<blockquote>
+<p>withState(stateName, setterName, initialState)</p>
+</blockquote>
+<p>Used for state management.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = withState(&#39;counter&#39;, &#39;setCounter&#39;, 0);
+</code></pre>
+<h2 id="compose">compose</h2>
+<blockquote>
+<p>compose(...factories)</p>
+</blockquote>
+<p>Used for composing multiple factories into a single one.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = compose(
+  withProps({ foo: &#39;foo value &#39;}),
+  withprops({ bar: &#39;bar value&#39; }),
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+);
+</code></pre>
+<h2 id="withreducer">withReducer</h2>
+<blockquote>
+<p>withReducer(stateName, dispatcherNAme, reducer, initialState)</p>
+</blockquote>
+<p>For generating props via reducer functions.</p>
+<p><strong>Arguments:</strong></p>
+<ol>
+<li><code>stateName</code> (<code>String</code>): Name of the prop where state will be set</li>
+<li><code>dispatcherName</code> (<code>String</code>): Name of the prop for setting dispatch function</li>
+<li><code>reducer</code> (<code>Function</code>): Accepting <code>(state, action)</code>, and returning new state</li>
+<li><code>initialState</code> (<code>Any</code>): Initial state to begin with</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-js">function reducer(state, action) {
+  switch (action.type) {
+    case &#39;INCREMENT&#39;:
+      return { value: state.value + 1 };
+    case &#39;DECREMENT&#39;:
+      return { value: state.value - 1 };
+    default:
+      return state;
+  }
+}
+
+const P = withReducer(&#39;counter&#39;, &#39;dispatch&#39;, reducer, { value: 0 });
+const p = P();
+
+p.dispatch({ type: &#39;INCREMENT&#39; });
+console.log(p.props.counter) // { value: 1 }
+</code></pre>
+<p>You can also pass functions to <code>dispatch</code>:</p>
+<pre><code class="lang-js">p.dispatch(function (props, providers) {
+  return { type: &#39;INCREMENT&#39; };
+});
+</code></pre>
+<h2 id="withhandlers">withHandlers</h2>
+<blockquote>
+<p>withHandlers(handlers)</p>
+</blockquote>
+<p>Used for handling side-effects.</p>
+<p><strong>Examples:</strong></p>
+<p>Basic handler:</p>
+<pre><code class="lang-js">const P = withHandlers({
+  handleFoo: (props, providers) =&gt; () =&gt; console.log(&#39;handling foo!&#39;)
+});
+</code></pre>
+<p>A better example with composition:</p>
+<pre><code class="lang-js">const P = compose(
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  withHandlers({
+    incrementBy: (props, providers) =&gt; (n) =&gt; {
+      props.setCounter(props.counter + n);
+    },
+  }),
+);
+
+const p = P();
+
+p.incrementBy(1);
+console.log(p.props.counter); // 1
+</code></pre>
+<h2 id="withstatehandlers">withStateHandlers</h2>
+<blockquote>
+<p>withStateHandlers(initialState, handlers)</p>
+</blockquote>
+<p>Used for state management via handlers.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = withStateHandlers(
+  // initial state
+  {
+    counter: 0,
+  },
+
+  // handlers
+  {
+    incrementBy: (props, providers) =&gt; (n) =&gt; {
+      // return new state
+      return {
+        counter: props.counter + n,
+      };
+    }
+  }
+);
+
+const p = P();
+p.incrementBy(5);
+p.incrementBy(5);
+console.log(p.props.counter); // 10
+</code></pre>
+<h2 id="withobservable">withObservable</h2>
+<blockquote>
+<p>withObservable((props, providers) =&gt; props$)</p>
+</blockquote>
+<p>Used for returning an Observable of props.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">import { of } from &#39;rxjs&#39;;
+
+const P = withObservable((props, providers) =&gt; {
+  return of({
+    foo: &#39;foo value&#39;,
+  });
+});
+</code></pre>
+<p>For advanced usage, look into <a href="/docs/packages/proppy-rx"><code>proppy-rx</code></a> package, where you can also access incoming props as an Observable.</p>
+<h2 id="withtimer">withTimer</h2>
+<blockquote>
+<p>withTimer(timer, props)</p>
+</blockquote>
+<blockquote>
+<p>withTimer(timer, (props, providers) =&gt; props)</p>
+</blockquote>
+<p>Sets props after timer has elapsed.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">// prop `foo` is set after 1 second
+const P = withTimer(1000, { foo: &#39;foo value&#39; });
+</code></pre>
+<p>Accessing current props and providers:</p>
+<pre><code class="lang-js">const P = withTimer(100, (props, providers) =&gt; ({
+  foo: &#39;foo value&#39;,
+}));
+</code></pre>
+<h2 id="onchange">onChange</h2>
+<blockquote>
+<p>onChange(propName, (prop, providers) =&gt; props)</p>
+</blockquote>
+<blockquote>
+<p>onChange(
+  (prevProps, nextProps) =&gt; true,
+  (props, providers) =&gt; props
+)</p>
+</blockquote>
+<blockquote>
+<p>onChange(
+  propName,
+  (props, providers, cb) =&gt; void
+)</p>
+</blockquote>
+<p>Detect a change in props, and return new props.</p>
+<p><strong>Examples:</strong></p>
+<p>Change <code>foo</code>, when <code>counter</code> changes:</p>
+<pre><code class="lang-js">const P = compose(
+  withProps({ foo: &#39;initial foo value&#39; })
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  onChange(&#39;counter&#39;, (props, providers) =&gt; ({
+    foo: `changed foo with counter ${props.counter}`
+  }))
+);
+
+const p = P();
+console.log(p.props.foo); // `initial foo value`
+
+p.props.setCounter(10);
+console.log(p.props.foo); // `changed foo with counter 10`
+</code></pre>
+<p>Detecting complex changes:</p>
+<pre><code class="lang-js">const P = compose(
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  onChange(
+    // detect
+    (prevProps, nextProps) =&gt; true,
+
+    // return props
+    (props, providers) =&gt; props
+  )
+);
+</code></pre>
+<p>Returning async props:</p>
+<pre><code class="lang-js">const P = compose(
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  onChange(
+    // detect
+    (prevProps, nextProps) =&gt; true,
+
+    // return props by callback
+    (props, providers, cb) =&gt; {
+      cb(props);
+    }
+  )
+);
+</code></pre>
+<h2 id="map">map</h2>
+<blockquote>
+<p>map((props, providers) =&gt; props)</p>
+</blockquote>
+<p>Used for mapping incoming props to returned props.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = compose(
+  withProps({ foo: &#39;foo value&#39; }),
+  map(props =&gt; ({ foo: props.foo.toUpperCase() })),
+);
+</code></pre>
+<h2 id="shouldupdate">shouldUpdate</h2>
+<blockquote>
+<p>shouldUpdate((prevProps, nextProps, providers) =&gt; true)</p>
+</blockquote>
+<p>Used for limiting the events</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = compose(
+  withState(&#39;counter&#39;, &#39;setCounter&#39;, 0),
+  shouldUpdate((prevProps, nextProps) =&gt; {
+    // emit further only if counter is an even number
+    return nextProps.counter % 2 === 0;
+  });
+);
+</code></pre>
+<h2 id="didsubscribe">didSubscribe</h2>
+<blockquote>
+<p>didSubscribe((props, providers) =&gt; {})</p>
+</blockquote>
+<p>For handling side-effects upon first subscription.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = didSubscribe((props, providers) =&gt; {
+  // do something
+
+  // optionally return a function
+  // that will be called when instance is destroyed
+  return () =&gt; {};
+})
+</code></pre>
+<h2 id="willdestroy">willDestroy</h2>
+<blockquote>
+<p>willDestroy((props, providers) =&gt; {})</p>
+</blockquote>
+<p>For handling side-effects when instance is destroyed.</p>
+<h2 id="emit">emit</h2>
+<blockquote>
+<p>emit((cb, props, providers) =&gt; {})</p>
+</blockquote>
+<p>For emitting new props after subscription.</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="lang-js">const P = emit((cb, props, providers) =&gt; {
+  cb({ foo: &#39;foo value&#39; });
+
+  // optionally return a function
+  // that will be called when instance is destroyed
+  return () =&gt; {};
+});
+</code></pre>
+<h2 id="handlereceivedprops">handleReceivedProps</h2>
+<blockquote>
+<p>handleReceivedProps(true|false)</p>
+</blockquote>
+<blockquote>
+<p>handleReceivedProps((receivedProps) =&gt; {})</p>
+</blockquote>
+<p>Accept props coming from parent instances.</p>
+<h2 id="create">create</h2>
+<blockquote>
+<p>create(options)</p>
+</blockquote>
+<p>Convenience function for creating your own functions, that can return factories.</p>
+<p>All the other functions in this library are built by using this <code>create</code> function internally.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>options.initialize</code> (<code>Function</code>)</li>
+<li><code>options.didSubscribe</code> (<code>Function</code>)</li>
+<li><code>options.willDestroy</code> (<code>Function</code>)</li>
+<li><code>options.handleReceivedProps</code> (<code>Boolean</code>|<code>Function</code>)</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<p>A producer of props:</p>
+<pre><code class="lang-js">function withFoo() {
+  return create({
+    initialize() {
+      // has access to:
+      //   - this.props
+      //   - this.providers
+
+      this.set({
+        foo: &#39;foo value&#39;,
+      });
+    }
+  });
+}
+</code></pre>
+<p>A mapper of props:</p>
+<pre><code class="lang-js">function capitalizeFoo() {
+  return create({
+    handleReceivedProps(receivedProps) {
+      this.set({
+        ...receivedProps,
+        foo: typeof receivedProps.foo !== &#39;undefined&#39;
+          ? receivedProps.foo.toUpperCase()
+          : undefined,
+      })
+    }
+  });
+}
+</code></pre>
+
+
+            <div class="paging">
+              <div class="tile">
+                <div class="tile is-half">
+                  
+                  <a class="prev" href="/docs/bundling">
+                    <i class="fa fa-arrow-left"></i>
+
+                    <span class="label">Previous</span>
+
+                    <span class="title">Bundling</span>
+                  </a>
+                  
+                </div>
+
+                <div class="tile is-half">
+                  
+                  <a class="next" href="/docs/packages/proppy-react">
+                    <i class="fa fa-arrow-right"></i>
+
+                    <span class="label">Next</span>
+
+                    <span class="title">proppy-react</span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Built with ❤︎ by <a href="https://twitter.com/fahad19">@fahad19</a> and <a href="https://github.com/fahad19/proppy/graphs/contributors">contributors</a>.
+      </p>
+
+      <p class="social-icons">
+        <a class="icon" title="GitHub" href="https://github.com/fahad19/proppy">
+          <i class="fa fa-github"></i>
+        </a>
+
+        <a class="icon" title="Twitter" href="https://twitter.com/proppyjs">
+          <i class="fa fa-twitter"></i>
+        </a>
+
+        <!--<a class="icon" title="Medium" href="https://medium.com/proppyjs">
+          <i class="fa fa-medium"></i>
+        </a>-->
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-solarizedlight.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="/js/site.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-119531648-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

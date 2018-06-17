@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction | ProppyJS</title>
+    <link rel="icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+<link rel="shortcut icon" href="/img/proppy-square-128.png" type="image/x-icon"/>
+
+<!-- meta -->
+
+<meta name="description" content="ProppyJS: JavaScript library for functional composition of props for UI components" />
+
+
+
+<meta name="keywords" content="javascript, library, react.js, vue.js, preact, rxjs, composition, props, framework" />
+
+
+
+<!-- og -->
+
+<meta property="og:title" content="ProppyJS: Functional props composition for UI components" />
+
+
+
+<meta property="og:description" content="ProppyJS is a tiny 1.5kB JavaScript library for functionally composing props for your UI components. Supporting integrations with React.js, Vue.js, Preact, Redux, and RxJS." />
+
+
+
+<meta property="og:image" content="/img/proppy-og.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@fahad19" />
+
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-start">
+  <a href="/" class="navbar-item brand">
+    <img alt="ProppyJS" src="/img/logo-transparent-128.png" />
+    <img alt="ProppyJS" src="/img/logo-text-80.png" />
+  </a>
+</div>
+
+<div class="navbar-end">
+  <a href="/docs/introduction" class="navbar-item is-tab">
+    Documentation
+  </a>
+
+  <a href="/docs/api" class="navbar-item is-tab">
+    API
+  </a>
+
+  <a href="/docs/playground" class="navbar-item is-tab">
+    Playground
+  </a>
+
+  <a href="https://github.com/fahad19/proppy" class="navbar-item is-tab">
+    GitHub
+  </a>
+</div>
+
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-quarter">
+            <div class="menu-container docs">
+  <aside class="menu docs">
+    
+    <p class="menu-label">
+      Intro
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/introduction">
+          Introduction
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Concepts
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/props">
+          Props
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/providers">
+          Providers
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/factory-instance">
+          Factory & Instance
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Getting started
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/quickstart">
+          Quick start
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Examples
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/examples/react-counter">
+          React: Counter
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-fetch-request">
+          React: Fetch Request
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-redux">
+          React: Redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/react-rxjs">
+          React: RxJS
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/examples/vue-counter">
+          Vue.js: Counter
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Advanced
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/lifecycle">
+          Lifecycle
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/testing">
+          Testing
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/bundling">
+          Bundling
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Packages
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/packages/proppy">
+          proppy
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-react">
+          proppy-react
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-vue">
+          proppy-vue
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-preact">
+          proppy-preact
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-redux">
+          proppy-redux
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/packages/proppy-rx">
+          proppy-rx
+        </a>
+      </li>
+      
+    </ul>
+    
+    <p class="menu-label">
+      Project
+    </p>
+
+    <ul class="menu-list">
+      
+      <li>
+        <a href="/docs/api">
+          API
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/playground">
+          Playground
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/changelog">
+          Change Log
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/contributing">
+          Contribution Guide
+        </a>
+      </li>
+      
+      <li>
+        <a href="/docs/faq">
+          FAQ
+        </a>
+      </li>
+      
+    </ul>
+    
+  </aside>
+</div>
+
+          </div>
+
+          <div class="column content main">
+            <h1 id="introduction">Introduction</h1>
+<!-- MarkdownTOC autolink=true bracket=round -->
+<ul>
+<li><a href="#what-is-proppyjs">What is ProppyJS?</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#focus">Focus</a></li>
+<li><a href="#inspiration">Inspiration</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<h2 id="what-is-proppyjs-">What is ProppyJS?</h2>
+<p>ProppyJS is a tiny <code>1.5kB</code> JavaScript library for composing props (object that components receive to render themselves).</p>
+<p>The generated props can then be used in your favourite components-based UI framework (like React or Vue.js).</p>
+<h2 id="purpose">Purpose</h2>
+<p>The primary purpose of this library is to <strong>lift the state one level above</strong> your UI components. So that your components are always stateless themselves, while you compose your props separately.</p>
+<p>This helps keep your components layer functional and small, while giving you the flexibility to test your Components and the behaviour of their props differently as needed.</p>
+<h2 id="packages">Packages</h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Status</th>
+<th>Size</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../packages/proppy">proppy</a></td>
+<td><a href="https://npmjs.com/package/proppy"><img src="https://img.shields.io/npm/v/proppy.svg" alt="proppy-status"></a></td>
+<td><code>1.5K</code></td>
+<td>Core package</td>
+</tr>
+<tr>
+<td><a href="../packages/proppy-react">proppy-react</a></td>
+<td><a href="https://npmjs.com/package/proppy-react"><img src="https://img.shields.io/npm/v/proppy-react.svg" alt="proppy-react-status"></a></td>
+<td><code>1.0K</code></td>
+<td>React integration</td>
+</tr>
+<tr>
+<td><a href="../packages/proppy-vue">proppy-vue</a></td>
+<td><a href="https://npmjs.com/package/proppy-vue"><img src="https://img.shields.io/npm/v/proppy-vue.svg" alt="proppy-vue-status"></a></td>
+<td><code>0.7K</code></td>
+<td>Vue.js integration</td>
+</tr>
+<tr>
+<td><a href="../packages/proppy-preact">proppy-preact</a></td>
+<td><a href="https://npmjs.com/package/proppy-preact"><img src="https://img.shields.io/npm/v/proppy-preact.svg" alt="proppy-preact-status"></a></td>
+<td><code>1.1K</code></td>
+<td>Preact integration</td>
+</tr>
+<tr>
+<td><a href="../packages/proppy-redux">proppy-redux</a></td>
+<td><a href="https://npmjs.com/package/proppy-redux"><img src="https://img.shields.io/npm/v/proppy-redux.svg" alt="proppy-redux-status"></a></td>
+<td><code>0.6K</code></td>
+<td>Redux integration</td>
+</tr>
+<tr>
+<td><a href="../packages/proppy-rx">proppy-rx</a></td>
+<td><a href="https://npmjs.com/package/proppy-rx"><img src="https://img.shields.io/npm/v/proppy-rx.svg" alt="proppy-rx-status"></a></td>
+<td><code>0.6K</code></td>
+<td>RxJS integration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="focus">Focus</h2>
+<p>There are already many framework-specific utility libraries out there. Proppy is different because it aims to stay agnostic of any specific framework, and maintain a small dependency-free core library.</p>
+<p>It supports other frameworks via additional integration packages, which you can use as your application&#39;s requirements grow.</p>
+<p>Proppy aims to only deal with the data layer, in the form of props composition. Either you want to use them in a ReactJS, Vue.js or a plain JavaScript application is totally up to you.</p>
+<h2 id="inspiration">Inspiration</h2>
+<p>Original inspiration for this project has been <a href="https://github.com/acdlite/recompose"><code>recompose</code></a> and <a href="https://github.com/frintjs/frint-props"><code>frint-props</code></a>.</p>
+
+
+            <div class="paging">
+              <div class="tile">
+                <div class="tile is-half">
+                  
+                </div>
+
+                <div class="tile is-half">
+                  
+                  <a class="next" href="/docs/props">
+                    <i class="fa fa-arrow-right"></i>
+
+                    <span class="label">Next</span>
+
+                    <span class="title">Props</span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Built with ❤︎ by <a href="https://twitter.com/fahad19">@fahad19</a> and <a href="https://github.com/fahad19/proppy/graphs/contributors">contributors</a>.
+      </p>
+
+      <p class="social-icons">
+        <a class="icon" title="GitHub" href="https://github.com/fahad19/proppy">
+          <i class="fa fa-github"></i>
+        </a>
+
+        <a class="icon" title="Twitter" href="https://twitter.com/proppyjs">
+          <i class="fa fa-twitter"></i>
+        </a>
+
+        <!--<a class="icon" title="Medium" href="https://medium.com/proppyjs">
+          <i class="fa fa-medium"></i>
+        </a>-->
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-solarizedlight.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="/js/site.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-119531648-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
