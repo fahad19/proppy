@@ -1,0 +1,31 @@
+{
+  "name": "proppyjs-preact-playground-wip",
+  "description": null,
+  "version": "0.0.16",
+  "dependencies": {
+    "preact-compat": "3.17.0",
+    "preact": "8.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-synacor": "^1.1.0",
+    "if-env": "^1.0.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "preact-cli": "^1.4.1",
+    "sass-loader": "^6.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
+  },
+  "scripts": {
+    "test": "eslint . && preact test",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  }
+}
