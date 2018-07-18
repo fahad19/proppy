@@ -50,6 +50,6 @@ export class ProppySubscription extends Component<RenderableProps<ComponentProps
   }
 
   public render(props) {
-    return props.children[0](this.state.proppyProps);
+    return props.children[0](Object.assign({}, this.state.proppyProps, props.parentProps));
   }
 }
