@@ -25,7 +25,7 @@ if (NODE_ENV === 'production') {
 
 module.exports = {
   entry: {
-    'proppy-react': path.join(__dirname, '/src/index.ts'),
+    'proppy-preact': path.join(__dirname, '/src/index.ts'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
