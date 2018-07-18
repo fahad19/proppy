@@ -3,13 +3,9 @@ const path = require('path');
 const webpack = require('webpack');
 const CompressionPlugin = require('compression-webpack-plugin');
 
-const NODE_ENV = process.env.NODE_ENV === 'production'
-  ? 'production'
-  : 'development';
+const NODE_ENV = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
-const filename = NODE_ENV === 'production'
-  ? '[name].min.js'
-  : '[name].js';
+const filename = NODE_ENV === 'production' ? '[name].min.js' : '[name].js';
 
 const plugins = [
   new webpack.DefinePlugin({
@@ -18,16 +14,18 @@ const plugins = [
 ];
 
 if (NODE_ENV === 'production') {
-  plugins.push(new CompressionPlugin({
-    asset: '[path].gz[query]',
-    algorithm: 'gzip',
-    test: /\.js/,
-  }));
+  plugins.push(
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js/,
+    }),
+  );
 }
 
 module.exports = {
   entry: {
-    'proppy-preact': path.join(__dirname, '/src/index.js'),
+    'proppy-react': path.join(__dirname, '/src/index.ts'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -46,18 +44,14 @@ module.exports = {
     hints: false,
   },
   resolve: {
-    extensions: [
-      '.ts',
-      '.tsx',
-      '.js',
-    ],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
+        loader: 'ts-loader',
       },
     ],
   },

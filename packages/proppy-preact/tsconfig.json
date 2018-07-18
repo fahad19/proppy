@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "es5",
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "declaration": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": []
+}
