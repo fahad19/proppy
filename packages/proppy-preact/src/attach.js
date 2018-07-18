@@ -38,7 +38,7 @@ export function attach(P) {
       }
 
       render(props, state) {
-        return h(BaseComponent, state.proppyProps, null);
+        return h(BaseComponent, state.proppyProps, props.children);
       }
     }
   };
