@@ -6,8 +6,8 @@
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-frint-react",
   "scripts": {
     "clean": "../../node_modules/.bin/rimraf dist lib",
-    "lint": "../../node_modules/.bin/eslint src",
-    "transpile": "../../node_modules/.bin/babel src --out-dir lib",
+    "lint": "../../node_modules/.bin/tslint -c ../../tslint.json -p tsconfig.json -t stylish",
+    "transpile": "../../node_modules/.bin/tsc",
     "test": "../../node_modules/.bin/jest --",
     "cover": "../../node_modules/.bin/jest --coverage",
     "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
@@ -28,6 +28,8 @@
     "proppy"
   ],
   "devDependencies": {
+    "@types/react": "^16.4.6",
+    "frint": "^5.6.1",
     "frint-config": "^5.4.3",
     "frint-react": "^5.4.3",
     "proppy-react": "^1.2.2",
