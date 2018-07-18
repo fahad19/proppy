@@ -1,6 +1,6 @@
 {
   "name": "proppy-redux",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Redux integration with ProppyJS",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-redux",
@@ -28,7 +28,7 @@
     "proppy"
   ],
   "devDependencies": {
-    "proppy": "^1.2.2",
+    "proppy": "^1.2.3",
     "redux": "^4.0.0"
   },
   "bugs": {
