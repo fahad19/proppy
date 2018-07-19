@@ -32,6 +32,7 @@
     "frint": "^5.6.1",
     "frint-config": "^5.4.3",
     "frint-react": "^5.4.3",
+    "proppy": "^1.2.3",
     "proppy-react": "^1.2.3",
     "react": "^15.3.0"
   },
