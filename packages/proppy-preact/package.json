@@ -6,8 +6,8 @@
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-preact",
   "scripts": {
     "clean": "../../node_modules/.bin/rimraf dist lib",
-    "lint": "../../node_modules/.bin/eslint src",
-    "transpile": "../../node_modules/.bin/babel src --out-dir lib",
+    "lint": "../../node_modules/.bin/tslint -c ../../tslint.json -p tsconfig.json -t stylish",
+    "transpile": "../../node_modules/.bin/tsc",
     "test": "../../node_modules/.bin/jest --",
     "cover": "../../node_modules/.bin/jest --coverage",
     "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "preact-context": "^1.0.2"
+  }
 }
