@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.2.4 (2018-07-19)
+
+#### Pull Requests
+* `proppy-frint-react`, `proppy-preact`
+  * [#23](https://github.com/fahad19/proppy/pull/23) Migrate `proppy-preact` and `proppy-frint-react` to TypeScript. ([@chimon2000](https://github.com/chimon2000))
+
+#### Committers: 1
+- Ryan ([chimon2000](https://github.com/chimon2000))
+
 ## v1.2.3 (2018-07-18)
 
 #### Pull Requests
