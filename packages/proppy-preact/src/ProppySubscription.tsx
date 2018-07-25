@@ -19,13 +19,14 @@ export class ProppySubscription extends Component<RenderableProps<ComponentProps
     super(props, context);
 
     const { providers } = context;
+    const { parentProps, proppyFactory } = props;
 
     this._parent = create({
       initialize() {
-        this.set(props);
+        this.set(parentProps);
       },
     })(providers);
-    this._p = props.proppyFactory(providers, this._parent);
+    this._p = proppyFactory(providers, this._parent);
 
     this.state = {
       proppyProps: this._p.props,
@@ -50,6 +51,6 @@ export class ProppySubscription extends Component<RenderableProps<ComponentProps
   }
 
   public render(props) {
-    return props.children[0](Object.assign({}, this.state.proppyProps, props.parentProps));
+    return props.children[0](this.state.proppyProps);
   }
 }
