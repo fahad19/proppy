@@ -1,13 +1,13 @@
 {
   "name": "proppy-preact",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Preact integration with ProppyJS",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-preact",
   "scripts": {
     "clean": "../../node_modules/.bin/rimraf dist lib",
-    "lint": "../../node_modules/.bin/eslint src",
-    "transpile": "../../node_modules/.bin/babel src --out-dir lib",
+    "lint": "../../node_modules/.bin/tslint -c ../../tslint.json -p tsconfig.json -t stylish",
+    "transpile": "../../node_modules/.bin/tsc",
     "test": "../../node_modules/.bin/jest --",
     "cover": "../../node_modules/.bin/jest --coverage",
     "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
@@ -29,10 +29,13 @@
   ],
   "devDependencies": {
     "preact": "^8.2.9",
-    "proppy": "^1.2.2"
+    "proppy": "^1.2.4"
   },
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "preact-context": "^1.0.2"
+  }
 }

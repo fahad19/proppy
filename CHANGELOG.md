@@ -1,5 +1,26 @@
 # Change Log
 
+## v1.2.4 (2018-07-19)
+
+#### Pull Requests
+* `proppy-frint-react`, `proppy-preact`
+  * [#23](https://github.com/fahad19/proppy/pull/23) Migrate `proppy-preact` and `proppy-frint-react` to TypeScript. ([@chimon2000](https://github.com/chimon2000))
+
+#### Committers: 1
+- Ryan ([chimon2000](https://github.com/chimon2000))
+
+## v1.2.3 (2018-07-18)
+
+#### Pull Requests
+* `proppy-preact`
+  * [#22](https://github.com/fahad19/proppy/pull/22) proppy-preact: Fix for passing children. ([@jchn](https://github.com/jchn))
+* Other
+  * [#16](https://github.com/fahad19/proppy/pull/16) Examples: Preact Playground. ([@fahad19](https://github.com/fahad19))
+
+#### Committers: 2
+- Fahad Ibnay Heylaal ([fahad19](https://github.com/fahad19))
+- John van de Water ([jchn](https://github.com/jchn))
+
 ## v1.2.2 (2018-06-16)
 
 #### Pull Requests

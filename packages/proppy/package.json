@@ -1,6 +1,6 @@
 {
   "name": "proppy",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "ProppyJS - Functional composition of props for components",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy",
