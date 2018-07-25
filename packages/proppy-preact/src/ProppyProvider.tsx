@@ -5,7 +5,7 @@ import { Component } from 'preact';
  */
 export class ProppyProvider extends Component {
   public getChildContext() {
-    const { children, ...context } = this.props; // eslint-disable-line
+    const { children, ...context } = this.props;
 
     return context;
   }

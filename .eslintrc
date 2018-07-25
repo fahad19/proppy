@@ -1,9 +1,0 @@
-{
-  "parser": "babel-eslint",
-  "extends": "eslint:recommended",
-  "plugins": [],
-  "env": {
-    "node": true
-  },
-  "rules": {}
-}
