@@ -1,5 +1,17 @@
 # Change Log
 
+## v1.2.5 (2018-09-05)
+
+#### Pull Requests
+* `proppy`
+  * [#32](https://github.com/fahad19/proppy/pull/32) Fixes unsubscribe on multiple subscribers after destroy. ([@reaktivo](https://github.com/reaktivo))
+* `proppy-frint-react`, `proppy-preact`
+  * [#25](https://github.com/fahad19/proppy/pull/25) Remove Babel and ESLint. ([@chimon2000](https://github.com/chimon2000))
+
+#### Committers: 2
+- Marcel Miranda Ackerman ([reaktivo](https://github.com/reaktivo))
+- Ryan ([chimon2000](https://github.com/chimon2000))
+
 ## v1.2.4 (2018-07-19)
 
 #### Pull Requests
