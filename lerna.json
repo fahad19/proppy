@@ -3,7 +3,7 @@
   "packages": [
     "packages/*"
   ],
-  "version": "1.2.4",
+  "version": "1.2.5",
   "changelog": {
     "repo": "fahad19/proppy",
     "labels": {
