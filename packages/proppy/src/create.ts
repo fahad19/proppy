@@ -66,7 +66,7 @@ export function create(options: ProppyFactoryOptions): ProppyFactory {
       cb(p.props);
 
       return function () {
-        callbacks = callbacks.filter(_cb => cb !== _cb);
+        callbacks = callbacks.filter(callback => cb !== callback);
       };
     };
 
@@ -80,7 +80,7 @@ export function create(options: ProppyFactoryOptions): ProppyFactory {
         parent.destroy();
       }
 
-      callbacks = []
+      callbacks = [];
     };
 
     if (options.initialize) {
