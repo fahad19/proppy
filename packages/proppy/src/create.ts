@@ -8,17 +8,6 @@ function notify(callbacks, props) {
   callbacks.forEach(cb => cb(props));
 }
 
-function removeCallback(callbacks, cb = null) {
-  for (let i = 0; i < callbacks.length; i++) {
-    if (cb && callbacks[i] === cb) {
-      callbacks.splice(i, 1);
-      break;
-    } else {
-      callbacks.splice(i, 1);
-    }
-  }
-}
-
 function defaultParentHandler() {
   this.set.apply(this, arguments);
 }
@@ -43,7 +32,7 @@ function getParentHandler(parent: null|Proppy, options: ProppyFactoryOptions) {
 
 export function create(options: ProppyFactoryOptions): ProppyFactory {
   return function (providers = {}, parent): Proppy {
-    const callbacks = [];
+    let callbacks = [];
     let hasSubscribed = false;
     const parentHandler = getParentHandler(parent, options);
     let parentSubscription;
@@ -77,7 +66,7 @@ export function create(options: ProppyFactoryOptions): ProppyFactory {
       cb(p.props);
 
       return function () {
-        removeCallback(callbacks, cb);
+        callbacks = callbacks.filter(_cb => cb !== _cb);
       };
     };
 
@@ -91,7 +80,7 @@ export function create(options: ProppyFactoryOptions): ProppyFactory {
         parent.destroy();
       }
 
-      removeCallback(callbacks);
+      callbacks = []
     };
 
     if (options.initialize) {
