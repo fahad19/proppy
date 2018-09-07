@@ -10,7 +10,6 @@ export class Base extends React.Component<ProviderProps & { providers }> {
 }
 
 export const ProppyProvider = observe((app: any) => {
-  return streamProps({})
-    .set({ providers: app.container.registry })
+  return streamProps({ providers: app.container.registry })
     .get$();
 })(Base);
