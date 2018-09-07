@@ -1,6 +1,6 @@
 {
   "name": "proppy-vue",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Vue.js integration with ProppyJS",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-vue",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.15",
     "ajv": "^6.4.0",
-    "proppy": "^1.2.5",
+    "proppy": "^1.2.6",
     "vue": "^2.5.16",
     "vue-template-compiler": "^2.5.16"
   },

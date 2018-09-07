@@ -1,6 +1,6 @@
 {
   "name": "proppy-frint-react",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "FrintJS + React integration with ProppyJS",
   "main": "lib/index.js",
   "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-frint-react",
@@ -32,8 +32,8 @@
     "frint": "^5.6.1",
     "frint-config": "^5.4.3",
     "frint-react": "^5.4.3",
-    "proppy": "^1.2.5",
-    "proppy-react": "^1.2.5",
+    "proppy": "^1.2.6",
+    "proppy-react": "^1.2.6",
     "react": "^15.3.0"
   },
   "bugs": {
