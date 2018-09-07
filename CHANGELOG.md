@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.2.6 (2018-09-07)
+
+#### Pull Requests
+* `proppy-frint-react`
+  * [#33](https://github.com/fahad19/proppy/pull/33) Fix properties mapping in ProppyProvider. ([@leandrooriente](https://github.com/leandrooriente))
+
+#### Committers: 1
+- Leandro Oriente ([leandrooriente](https://github.com/leandrooriente))
+
 ## v1.2.5 (2018-09-05)
 
 #### Pull Requests
