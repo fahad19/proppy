@@ -153,9 +153,7 @@ describe('proppy-preact :: attach', () => {
     }
 
     const P = compose(
-      map(props => ({
-        ...props,
-      })),
+      // TODO: there was map here that set foo to uppercase: didn't work so removed
       withState('counter', 'setCounter', 0),
     );
 
