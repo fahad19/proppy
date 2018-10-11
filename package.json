@@ -35,6 +35,7 @@
     "compression-webpack-plugin": "^1.1.11",
     "jest": "^22.4.3",
     "js-yaml": "^3.11.0",
+    "jsdom": "11.11.0",
     "lerna": "^2.11.0",
     "lerna-changelog": "^0.7.0",
     "live-server": "^1.2.0",
