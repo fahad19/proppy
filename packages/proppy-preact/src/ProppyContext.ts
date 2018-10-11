@@ -1,3 +1,3 @@
 import { createContext, Context } from 'preact-context';
 
-export const ProppyContext = createContext('proppy');
+export const ProppyContext = createContext({providers:{}});

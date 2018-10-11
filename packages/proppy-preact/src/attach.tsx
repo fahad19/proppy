@@ -8,13 +8,15 @@ export function attach(P: ProppyFactory) {
   return function(Component) {
     return function(props) {
       return (
-        <ProppyContext.Consumer>
-          {providers => (
-            <ProppySubscription parentProps={props} providers={providers || {}} proppyFactory={P}>
-              {proppyProps => <Component {...proppyProps} />}
-            </ProppySubscription>
-          )}
-        </ProppyContext.Consumer>
+        <ProppyContext.Provider>
+          <ProppyContext.Consumer>
+            {providers => (
+              <ProppySubscription parentProps={props} providers={providers || {}} proppyFactory={P}>
+                {proppyProps => <Component {...proppyProps} />}
+              </ProppySubscription>
+            )}
+          </ProppyContext.Consumer>
+        </ProppyContext.Provider>
       );
     };
   };
