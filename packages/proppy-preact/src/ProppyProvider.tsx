@@ -1,13 +1,16 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 
-import { ProppyContext } from './ProppyContext';
-
+/**
+ * Source: https://gist.github.com/developit/5d879edb820228224dc9
+ */
 export class ProppyProvider extends Component {
-  public render({ children, providers }) {
-    return (
-      <ProppyContext.Provider value={providers}>
-        {children}
-      </ProppyContext.Provider>
-    );
+  public getChildContext() {
+    const { children, ...context } = this.props;
+
+    return context;
+  }
+
+  public render({ children }) {
+    return (children && children[0]) || null;
   }
 }

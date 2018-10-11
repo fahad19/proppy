@@ -2,7 +2,7 @@
 /** @jsx h */
 import { h, Component } from 'preact';
 import { compose, withState, withProps, map } from 'proppy';
-import * as RenderSpy from 'preact-render-spy'
+import * as RenderSpy from 'preact-render-spy';
 import { resetDOM } from 'frint-test-utils';
 
 import { attach } from './attach';
