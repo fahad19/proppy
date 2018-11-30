@@ -28,7 +28,9 @@
     "proppy"
   ],
   "devDependencies": {
-    "proppy": "^1.2.6"
+    "proppy": "^1.2.6",
+    "proppy-react": "^1.2.6",
+    "react": "^16.7.0-alpha.0"
   },
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
