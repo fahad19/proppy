@@ -11,14 +11,13 @@ describe('proppy-react-hooks :: useProppy', () => {
   let reactRoot;
 
   beforeEach(() => {
-    resetDOM();
-
     reactRoot = document.createElement('div');
     document.body.appendChild(reactRoot);
   });
 
   afterEach(() => {
     document.body.removeChild(reactRoot);
+    reactRoot = null;
   });
 
   test('is a function', () => {
@@ -71,6 +70,7 @@ describe('proppy-react-hooks :: useProppy', () => {
       );
     }
 
+    console.log('will render');
     ReactDOM.render(<Root />, reactRoot);
     expect(reactRoot.textContent).toEqual('foo value');
   });
