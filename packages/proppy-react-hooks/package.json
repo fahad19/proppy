@@ -1,9 +1,9 @@
 {
-  "name": "proppy-react-hook",
+  "name": "proppy-react-hooks",
   "version": "1.2.6",
   "description": "React hooks for ProppyJS",
   "main": "lib/index.js",
-  "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-react-hook",
+  "homepage": "https://github.com/fahad19/proppy/tree/master/packages/proppy-react-hooks",
   "scripts": {
     "clean": "../../node_modules/.bin/rimraf dist lib",
     "lint": "../../node_modules/.bin/tslint -c ../../tslint.json -p tsconfig.json -t stylish",

@@ -27,13 +27,13 @@ if (NODE_ENV === 'production') {
 
 module.exports = {
   entry: {
-    'proppy-react-hook': path.join(__dirname, '/src/index.ts'),
+    'proppy-react-hooks': path.join(__dirname, '/src/index.ts'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: filename,
     libraryTarget: 'umd',
-    library: 'ProppyReactHook',
+    library: 'ProppyReactHooks',
   },
   externals: {
     proppy: 'Proppy',

@@ -1,6 +1,6 @@
-# proppy-react-hook
+# proppy-react-hooks
 
-[![npm](https://img.shields.io/npm/v/proppy-react-hook.svg)](https://www.npmjs.com/package/proppy-react-hook)
+[![npm](https://img.shields.io/npm/v/proppy-react-hooks.svg)](https://www.npmjs.com/package/proppy-react-hooks)
 
 > React hooks for ProppyJS
 
@@ -30,10 +30,10 @@ Via [unpkg](https://unpkg.com) CDN:
 
 ```html
 <script src="https://unpkg.com/proppy@latest/dist/proppy.min.js"></script>
-<script src="https://unpkg.com/proppy-react-hook@latest/dist/proppy-react-hook.min.js"></script>
+<script src="https://unpkg.com/proppy-react-hooks@latest/dist/proppy-react-hooks.min.js"></script>
 
 <script>
-  // available as `window.ProppyReactHook`
+  // available as `window.ProppyReactHooks`
 </script>
 ```
 
