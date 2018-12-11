@@ -3,7 +3,7 @@ import { ProppyContext } from 'proppy-react';
 
 export function useProppy(P, props = {}) {
   const providers = useContext(ProppyContext);
-  const p = P(props, providers);
+  const p = P(providers);
   const [proppyState, setProppyState] = useState(p.props);
 
   useEffect(() => {
