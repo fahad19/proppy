@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { ProppyContext } from 'proppy-react';
 
 export function useProppy(P, props = {}) {

@@ -1,6 +1,7 @@
 /* global describe, test, expect */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import * as TestRenderer from 'react-test-renderer';
 
 import { compose, withProps, withState } from 'proppy';
 import { ProppyProvider, attach } from 'proppy-react';
@@ -8,18 +9,6 @@ import { ProppyProvider, attach } from 'proppy-react';
 import { useProppy } from './useProppy';
 
 describe('proppy-react-hooks :: useProppy', () => {
-  let reactRoot;
-
-  beforeEach(() => {
-    reactRoot = document.createElement('div');
-    document.body.appendChild(reactRoot);
-  });
-
-  afterEach(() => {
-    document.body.removeChild(reactRoot);
-    reactRoot = null;
-  });
-
   test('is a function', () => {
     expect(typeof useProppy).toEqual('function');
   });
@@ -34,7 +23,7 @@ describe('proppy-react-hooks :: useProppy', () => {
     function Child(props) {
       const { foo } = useProppy(P);
 
-      return <p>{foo}</p>;
+      return <p data-test="foo">{foo}</p>;
     }
 
     function Root() {
@@ -45,11 +34,14 @@ describe('proppy-react-hooks :: useProppy', () => {
       );
     }
 
-    ReactDOM.render(<Root />, reactRoot);
-    expect(reactRoot.textContent).toEqual('foo value');
+    const result = TestRenderer.create(<Root />);
+    const testInstance = result.root;
+    const find = id => testInstance.findByProps({ "data-test": id })
+
+    expect(find('foo').children[0]).toEqual('foo value');
   });
 
-  test('----sync single render', () => {
+  test('-- running previous test again, but hangs', () => {
     const providers = {};
 
     const P = compose(
@@ -59,7 +51,7 @@ describe('proppy-react-hooks :: useProppy', () => {
     function Child(props) {
       const { foo } = useProppy(P);
 
-      return <p>{foo}</p>;
+      return <p data-test="foo">{foo}</p>;
     }
 
     function Root() {
@@ -70,35 +62,10 @@ describe('proppy-react-hooks :: useProppy', () => {
       );
     }
 
-    console.log('will render');
-    ReactDOM.render(<Root />, reactRoot);
-    expect(reactRoot.textContent).toEqual('foo value');
+    const result = TestRenderer.create(<Root />);
+    const testInstance = result.root;
+    const find = id => testInstance.findByProps({ "data-test": id })
+
+    expect(find('foo').children[0]).toEqual('foo value');
   });
-
-  // test('sync multiple renders', () => {
-  //   const providers = {};
-
-  //   const P = compose(
-  //     withState('counter', 'setCounter', 0),
-  //   );
-
-  //   function Child(props) {
-  //     const { counter, setCounter } = useProppy(P);
-
-  //     return <p onClick={() => setCounter(counter + 1)}>{counter}</p>;
-  //   }
-
-  //   function Root() {
-  //     return (
-  //       <ProppyProvider providers={providers}>
-  //         <Child />
-  //       </ProppyProvider>
-  //     );
-  //   }
-
-  //   ReactDOM.render(<Root />, reactRoot);
-
-  //   // const p = reactRoot.querySelector('p');
-  //   // console.log(p.textContent);
-  // });
 });

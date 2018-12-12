@@ -8,7 +8,7 @@
     "clean": "../../node_modules/.bin/rimraf dist lib",
     "lint": "../../node_modules/.bin/tslint -c ../../tslint.json -p tsconfig.json -t stylish",
     "transpile": "../../node_modules/.bin/tsc",
-    "test": "../../node_modules/.bin/jest --",
+    "test": "../../node_modules/.bin/jest --runInBand --",
     "cover": "../../node_modules/.bin/jest --coverage",
     "dist:lib": "../../node_modules/.bin/webpack --config ./webpack.config.js",
     "dist:min": "NODE_ENV=production ../../node_modules/.bin/webpack --config ./webpack.config.js",
@@ -30,8 +30,9 @@
   "devDependencies": {
     "proppy": "^1.2.6",
     "proppy-react": "^1.2.6",
-    "react": "^16.7.0-alpha.0",
-    "react-dom": "^16.7.0-alpha.2"
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-test-renderer": "^16.7.0-alpha.2"
   },
   "bugs": {
     "url": "https://github.com/fahad19/proppy/issues"
