@@ -21,6 +21,7 @@ export function withStore(
         this.set(mapState.apply(this, [
           this._store.getState(),
           this.providers,
+          this.props,
         ]));
       }
 
@@ -43,6 +44,7 @@ export function withStore(
           this.set(mapState.apply(this, [
             this._store.getState(),
             this.providers,
+            this.props,
           ]));
         });
       }
