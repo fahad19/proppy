@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.3.0 (2019-04-02)
+
+#### Pull Requests
+* `proppy-redux`
+  * [#41](https://github.com/fahad19/proppy/pull/41) Include ownProps into state mapper ([@dakota](https://github.com/dakota))
+
+#### Committers: 1
+- Walther Lalk ([dakota](https://github.com/dakota))
+
 ## v1.2.6 (2018-09-07)
 
 #### Pull Requests
