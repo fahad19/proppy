@@ -50,6 +50,17 @@ export function withStore(
       }
     },
 
+    handleReceivedProps(parentProps) {
+      if (mapState) {
+        this.set(parentProps);
+        this.set(mapState.apply(this, [
+          this._store.getState(),
+          this.providers,
+          this.props,
+        ]));
+      }
+    },    
+    
     willDestroy() {
       if (this._storeSubscription) {
         this._storeSubscription();
