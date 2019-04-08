@@ -60,7 +60,7 @@ export function withStore(
         ]));
       }
     },
-    
+
     willDestroy() {
       if (this._storeSubscription) {
         this._storeSubscription();
