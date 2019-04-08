@@ -59,7 +59,7 @@ export function withStore(
           this.props,
         ]));
       }
-    },    
+    },
     
     willDestroy() {
       if (this._storeSubscription) {
