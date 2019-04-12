@@ -134,8 +134,8 @@ describe('proppy-redux :: withStore', () => {
 
     p.subscribe(() => {});
 
-    expect(p.props.counter).toEqual(0);    
-    
+    expect(p.props.counter).toEqual(0);
+
     p.props.increment(p.props.key);
     p.props.increment(p.props.key);
 
