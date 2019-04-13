@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.3.1 (2019-04-13)
+
+#### Pull Requests
+* `proppy-redux`
+  * [#42](https://github.com/fahad19/proppy/pull/42) Call mapState when parentProps are received ([@dakota](https://github.com/dakota))
+
+
 ## v1.3.0 (2019-04-02)
 
 #### Pull Requests
