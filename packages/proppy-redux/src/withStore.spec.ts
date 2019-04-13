@@ -1,5 +1,6 @@
 /* global describe, test, expect */
 import { createStore, combineReducers } from 'redux';
+import { withState } from 'proppy';
 
 import { withStore } from './withStore';
 
@@ -74,6 +75,76 @@ describe('proppy-redux :: withStore', () => {
 
     p.props.decrement();
 
+    expect(p.props.counter).toEqual(1);
+  });
+
+  test('can receive updates', () => {
+    // constants
+    const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+    const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
+
+    // actions
+    function incrementCounter(payload) {
+      return {
+        type: INCREMENT_COUNTER,
+        payload
+      };
+    }
+    function decrementCounter(payload) {
+      return {
+        type: DECREMENT_COUNTER,
+        payload
+      };
+    }
+    // reducers
+    const INITIAL_STATE = {};
+
+    function counterReducer(state = INITIAL_STATE, action) {
+      switch (action.type) {
+        case INCREMENT_COUNTER:
+          return Object.assign({}, state, {
+            [action.payload]: (state[action.payload] || 0) + 1
+          });
+        case DECREMENT_COUNTER:
+          return Object.assign({}, state, {
+            [action.payload]: (state[action.payload] || 0) - 1
+          });
+        default:
+          return state;
+      }
+    }
+
+    const rootReducer = combineReducers({
+      counter: counterReducer,
+    });
+
+    const store = createStore(rootReducer);
+
+    const P = withStore(
+      (state, providers, ownProps) => ({ counter: state.counter[ownProps.key] || 0 }),
+      {
+        increment: incrementCounter,
+        decrement: decrementCounter,
+      },
+    );
+    const parent = withState('key', 'setKey', 'counter1')();
+    const p = P({
+      store,
+    }, parent);
+
+    p.subscribe(() => {});
+
+    expect(p.props.counter).toEqual(0);
+
+    p.props.increment(p.props.key);
+    p.props.increment(p.props.key);
+
+    expect(p.props.counter).toEqual(2);
+
+    parent.props.setKey('Counter2');
+
+    expect(p.props.counter).toEqual(0);
+    p.props.increment(p.props.key);
     expect(p.props.counter).toEqual(1);
   });
 });
